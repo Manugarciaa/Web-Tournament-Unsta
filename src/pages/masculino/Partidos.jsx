@@ -191,7 +191,12 @@ const Partidos = () => {
           dynamicTyping: true,
           skipEmptyLines: true,
           complete: (results) => {
-            setData(results.data);
+            const parsedData = results.data;
+            const jornada1 = parsedData.slice(0, 12);
+            const jornada2 = parsedData.slice(12, 24);
+            const eliminatorias = parsedData.slice(24);
+            
+            setData([...jornada1, ...jornada2, ...eliminatorias]);
             setIsLoading(false);
           },
           error: (error) => {
@@ -206,9 +211,10 @@ const Partidos = () => {
         setIsLoading(false);
       }
     };
-
+  
     fetchData();
   }, []);
+  
 
   const groupedMatches = useMemo(() => [
     {
