@@ -5,6 +5,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { IoArrowBackOutline, IoArrowForwardOutline } from 'react-icons/io5';
 
 import BIM_logo from '../../assets/images/BIM_logo.webp';
 import NOT_logo from '../../assets/images/NOT_logo.webp';
@@ -35,7 +36,7 @@ function Equipos() {
   };
 
   return (
-    <div>
+    <div className="equipos-container" style={{ height: '91vh' }}>
       <h1 className="w-full font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-2 text-center">
         <span className="text-gradient">Equipos</span>
       </h1>
@@ -85,13 +86,13 @@ function Equipos() {
           </SwiperSlide>
         ))}
         <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+          <div className="swiper-button-prev text-black slider-arrow">
+            <IoArrowBackOutline size={12} />
           </div>
-          <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
+          <div className="swiper-button-next text-black slider-arrow">
+            <IoArrowForwardOutline size={12} />
           </div>
-          <div className="swiper-pagination"></div>
+          <div className="swiper-pagination"style={{ display: 'flex', justifyContent: 'center' }}></div>
         </div>
       </Swiper>
     </div>

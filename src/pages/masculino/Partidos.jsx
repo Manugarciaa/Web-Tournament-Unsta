@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Papa from 'papaparse';
 import styled from 'styled-components';
 import SCH_logo from '../../assets/images/SCH_icon.webp';
@@ -98,33 +98,34 @@ const Etapa = styled.div`
 `;
 
 const getLogoForTeam = (teamName) => {
-  switch (teamName) {
-    case 'SCH': return SCH_logo;
-    case 'PAB': return PAB_logo;
-    case 'DX1': return DX1_logo;
-    case 'QUE': return QUE_logo;
-    case 'SSO': return SSO_logo;
-    case 'ANT': return ANT_logo;
-    case 'EXP': return EXP_logo;
-    case 'TAR': return TAR_logo;
-    case 'GHO': return GHO_logo;
-    case 'BAS': return BAS_logo;
-    case 'ARQ': return ARQ_logo;
-    case 'HDV': return HDV_logo;
-    case 'RAM': return RAM_logo;
-    case 'EVS': return EVS_logo;
-    case 'ADO': return ADO_logo;
-    case 'PMA': return PMA_logo;
-    default: return TBD_logo;
-  }
+  const logos = {
+    SCH: SCH_logo,
+    PAB: PAB_logo,
+    DX1: DX1_logo,
+    QUE: QUE_logo,
+    SSO: SSO_logo,
+    ANT: ANT_logo,
+    EXP: EXP_logo,
+    TAR: TAR_logo,
+    GHO: GHO_logo,
+    BAS: BAS_logo,
+    ARQ: ARQ_logo,
+    HDV: HDV_logo,
+    RAM: RAM_logo,
+    EVS: EVS_logo,
+    ADO: ADO_logo,
+    PMA: PMA_logo,
+    TBD: TBD_logo,
+  };
+  return logos[teamName] || TBD_logo;
 };
 
 const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado, estado }) => {
-  const logo1 = getLogoForTeam(equipo1);
-  const logo2 = getLogoForTeam(equipo2);
+  const logo1 = useMemo(() => getLogoForTeam(equipo1), [equipo1]);
+  const logo2 = useMemo(() => getLogoForTeam(equipo2), [equipo2]);
 
-  const displayResultOrDateTime = () => {
-    if (resultado !== null && resultado !== undefined && resultado !== '') {
+  const displayResultOrDateTime = useMemo(() => {
+    if (resultado) {
       return resultado;
     } else {
       const dateTime = fecha && hora ? `${fecha}\n${hora}` : (fecha || hora || 'Fecha y hora por definir');
@@ -132,7 +133,7 @@ const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado, estado
         <span key={i} className="date-time">{line}<br /></span>
       ));
     }
-  };
+  }, [fecha, hora, resultado]);
 
   return (
     <PartidoCard>
@@ -142,7 +143,7 @@ const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado, estado
         <span><strong style={{ fontSize: '2rem' }}>{equipo1 || '???'}</strong></span>
       </div>
       <div className="resultado">
-        {displayResultOrDateTime()}
+        {displayResultOrDateTime}
       </div>
       <div className="equipo">
         <img src={logo2} alt={equipo2 || '???'} />
@@ -209,10 +210,7 @@ const Partidos = () => {
     fetchData();
   }, []);
 
-  if (isLoading) return null;
-  if (error) return <p>Error: {error}</p>;
-
-  const groupedMatches = [
+  const groupedMatches = useMemo(() => [
     {
       title: "Jornada 1 - Fase de grupos",
       matches: data.slice(0, 12)
@@ -225,7 +223,7 @@ const Partidos = () => {
       title: "Jornada 3 - Eliminatorias",
       matches: data.slice(24)
     }
-  ];
+  ], [data]);
 
   return (
     <div className="flex flex-col items-center text-white">

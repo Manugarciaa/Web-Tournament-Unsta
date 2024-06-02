@@ -32,7 +32,7 @@ const GroupTable = ({ groupName, teams }) => {
   });
 
   return (
-    <div className="flex flex-col items-center mb-10 sm:mb-16">
+    <div className="flex flex-col items-center mb-10 sm:mb-16" style={{ height: '77vh' }}>
       <div className="w-full flex justify-center mb-5">
         <b className="text-white text-4xl sm:text-4xl">{groupName}</b>
       </div>
@@ -157,13 +157,9 @@ const FaseDeGrupos = () => {
       <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
         <span className="text-gradient">Fase de grupos</span>
       </h1>
-      {isLoading ? (
-        <div>Cargando...</div>
-      ) : (
-        groups.map((group, index) => (
-          <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
-        ))
-      )}
+      {groups.map((group, index) => (
+        <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
+      ))}
     </div>
   );
 };

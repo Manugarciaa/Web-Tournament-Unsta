@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Papa from 'papaparse';
 import TBD_logo from '../../assets/images/TBD_icon.webp';
 import SCH_logo from '../../assets/images/SCH_icon.webp';
@@ -43,15 +43,17 @@ const getLogo = (id) => {
 };
 
 const GroupTable = ({ groupName, teams }) => {
-  const sortedTeams = teams.sort((a, b) => {
-    if (b.points !== a.points) {
-      return b.points - a.points;
-    } else if (b.goalDifference !== a.goalDifference) {
-      return b.goalDifference - a.goalDifference;
-    } else {
-      return b.goalsFor - a.goalsFor; 
-    }
-  });
+  const sortedTeams = useMemo(() => {
+    return teams.sort((a, b) => {
+      if (b.points !== a.points) {
+        return b.points - a.points;
+      } else if (b.goalDifference !== a.goalDifference) {
+        return b.goalDifference - a.goalDifference;
+      } else {
+        return b.goalsFor - a.goalsFor; 
+      }
+    });
+  }, [teams]);
 
   return (
     <div className="flex flex-col items-center mb-10 sm:mb-16">
@@ -124,7 +126,6 @@ const GroupTable = ({ groupName, teams }) => {
 const FaseDeGrupos = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -140,72 +141,67 @@ const FaseDeGrupos = () => {
           skipEmptyLines: true,
           complete: (results) => {
             setData(results.data);
-            setIsLoading(false);
           },
           error: (error) => {
             console.error('Error al parsear el CSV:', error);
             setError('Error al parsear el archivo CSV');
-            setIsLoading(false);
           }
         });
       } catch (error) {
         console.error('Error al cargar el archivo CSV:', error);
         setError('Error al cargar el archivo CSV');
-        setIsLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
-  const grupoA = data.filter(item => item.Grupo === 'Grupo A');
-  const grupoB = data.filter(item => item.Grupo === 'Grupo B');
-  
-  const groups = [
-    {
-      groupName: 'Grupo A',
-      teams: grupoA.map((item) => ({
-        name: item.Equipo,
-        points: item.Pts,
-        played: item.PJ,
-        won: item.PG,
-        drawn: item.PE,
-        lost: item.PP,
-        goalsFor: item.GF,
-        goalsAgainst: item.GC,
-        goalDifference: item['Dif'],
-        logo: getLogo(item.ID)
-      })),
-    },
-    {
-      groupName: 'Grupo B',
-      teams: grupoB.map((item) => ({
-        name: item.Equipo,
-        points: item.Pts,
-        played: item.PJ,
-        won: item.PG,
-        drawn: item.PE,
-        lost: item.PP,
-        goalsFor: item.GF,
-        goalsAgainst: item.GC,
-        goalDifference: item['Dif'],
-        logo: getLogo(item.ID)
-      })),
-    },
-  ];
-  
+  const groups = useMemo(() => {
+    const grupoA = data.filter(item => item.Grupo === 'Grupo A');
+    const grupoB = data.filter(item => item.Grupo === 'Grupo B');
+    
+    return [
+      {
+        groupName: 'Grupo A',
+        teams: grupoA.map((item) => ({
+          name: item.Equipo,
+          points: item.Pts,
+          played: item.PJ,
+          won: item.PG,
+          drawn: item.PE,
+          lost: item.PP,
+          goalsFor: item.GF,
+          goalsAgainst: item.GC,
+          goalDifference: item['Dif'],
+          logo: getLogo(item.ID)
+        })),
+      },
+      {
+        groupName: 'Grupo B',
+        teams: grupoB.map((item) => ({
+          name: item.Equipo,
+          points: item.Pts,
+          played: item.PJ,
+          won: item.PG,
+          drawn: item.PE,
+          lost: item.PP,
+          goalsFor: item.GF,
+          goalsAgainst: item.GC,
+          goalDifference: item['Dif'],
+          logo: getLogo(item.ID)
+        })),
+      },
+    ];
+  }, [data]);
+
   return (
     <div className="flex flex-col items-center text-white">
       <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
         <span className="text-gradient">Fase de grupos</span>
       </h1>
-      {isLoading ? (
-        <div>Cargando...</div>
-      ) : (
-        groups.map((group, index) => (
-          <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
-        ))
-      )}
+      {groups.map((group, index) => (
+        <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
+      ))}
     </div>
   );
 };

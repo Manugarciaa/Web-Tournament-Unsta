@@ -58,7 +58,7 @@ function Equipos() {
   };
 
   return (
-    <div className="equipos-container" style={{ height: '100vh' }}>
+    <div className="equipos-container" style={{ height: '91vh' }}>
       <h1 className="w-full font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-2 text-center">
         <span className="text-gradient">Equipos</span>
       </h1>

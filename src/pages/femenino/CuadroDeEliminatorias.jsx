@@ -238,6 +238,7 @@ const CuadroDeEliminatorias = () => {
 
   return (
     <>
+    <div className="" style={{ height: '91vh' }}>
       <Title>
         <span className="text-gradient">Cuadro de eliminatorias</span>
       </Title>
@@ -287,6 +288,7 @@ const CuadroDeEliminatorias = () => {
           </CopaContainerBRONCE>
         </div>
       </CuadroContainer>
+      </div>
     </>
   );
 };
