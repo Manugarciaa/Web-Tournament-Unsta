@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaHome , FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaHome , FaInstagram } from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
-  background-color: #23282d;
   color: #fff;
   padding: 1rem;
   text-align: center;

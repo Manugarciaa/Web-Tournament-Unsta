@@ -10,7 +10,7 @@ import SCH_logo from '../../assets/images/SCH_logo.webp';
 import PAB_logo from '../../assets/images/PAB_logo.webp';
 import DX1_logo from '../../assets/images/DX1_logo.webp';
 import QUE_logo from '../../assets/images/QUE_logo.webp';
-import SZO_logo from '../../assets/images/SZO_logo.webp';
+import SSO_logo from '../../assets/images/SSO_logo.webp';
 import ANT_logo from '../../assets/images/ANT_logo.webp';
 import EXP_logo from '../../assets/images/EXP_logo.webp';
 import TAR_logo from '../../assets/images/TAR_logo.webp';
@@ -234,7 +234,7 @@ const getLogoForTeam = (teamName) => {
     case 'PAB': return PAB_logo;
     case 'DX1': return DX1_logo;
     case 'QUE': return QUE_logo;
-    case 'SZO': return SZO_logo;
+    case 'SSO': return SSO_logo;
     case 'ANT': return ANT_logo;
     case 'EXP': return EXP_logo;
     case 'TAR': return TAR_logo;
@@ -258,7 +258,7 @@ const CuadroDeEliminatorias = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/partidos.csv');
+        const response = await fetch('/partidos_masc.csv');
         if (!response.ok) {
           throw new Error('No se pudo cargar el archivo CSV');
         }

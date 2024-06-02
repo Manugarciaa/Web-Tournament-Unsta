@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
-import SZO_logo from '../../../assets/images/SZO_icon.webp';
+import DES_logo from '../../../assets/images/DES_icon.webp';
 
-const SZO = () => {
+const DES = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
@@ -11,7 +11,7 @@ const SZO = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/jugadores.csv');
+        const response = await fetch('/jugadoras_fem.csv');
         if (!response.ok) {
           throw new Error('No se pudo cargar el archivo CSV');
         }
@@ -45,7 +45,7 @@ const SZO = () => {
       return data.filter(item => item.ID === id);
     };
 
-    const datosFiltrados = filtrarPorId('SZO');
+    const datosFiltrados = filtrarPorId('DES');
 
     const jugadoresObj = {};
     datosFiltrados.forEach((item, index) => {
@@ -60,15 +60,15 @@ const SZO = () => {
   if (error) return <div style={{ color: 'red' }}>{error}</div>;
 
   return (
-    <div className="bg-[#23282D] min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <header className="text-white py-4 px-6 mb-8">
-        <h1 className="text-5xl font-bold text-center">San Zócalo</h1>
+        <h1 className="text-5xl font-bold text-center">Descaro F. C.</h1>
       </header>
       <div className="flex justify-center items-center w-full h-50">
         <img
           alt="Team Logo"
           height={200}
-          src={SZO_logo}
+          src={DES_logo}
           width={200}
         />
       </div>
@@ -91,7 +91,7 @@ const SZO = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default SZO;
+export default DES;

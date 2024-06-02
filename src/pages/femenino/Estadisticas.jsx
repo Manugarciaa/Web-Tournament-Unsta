@@ -1,22 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Papa from 'papaparse';
-import SCH_logo from '../../assets/images/SCH_icon.webp';
-import PAB_logo from '../../assets/images/PAB_icon.webp';
-import DX1_logo from '../../assets/images/DX1_icon.webp';
-import QUE_logo from '../../assets/images/QUE_icon.webp';
-import SSO_logo from '../../assets/images/SSO_icon.webp';
-import ANT_logo from '../../assets/images/ANT_icon.webp';
-import EXP_logo from '../../assets/images/EXP_icon.webp';
-import TAR_logo from '../../assets/images/TAR_icon.webp';
-import GHO_logo from '../../assets/images/GHO_icon.webp';
-import BAS_logo from '../../assets/images/BAS_icon.webp';
-import ARQ_logo from '../../assets/images/ARQ_icon.webp';
-import HDV_logo from '../../assets/images/HDV_icon.webp';
-import RAM_logo from '../../assets/images/RAM_icon.webp';
-import EVS_logo from '../../assets/images/EVS_icon.webp';
-import ADO_logo from '../../assets/images/ADO_icon.webp';
-import PMA_logo from '../../assets/images/PMA_icon.webp';
+import BIM_logo from '../../assets/images/BIM_icon.webp';
+import NOT_logo from '../../assets/images/NOT_icon.webp';
+import MAL_logo from '../../assets/images/MAL_icon.webp';
+import MUC_logo from '../../assets/images/MUC_icon.webp';
+import DES_logo from '../../assets/images/DES_icon.webp';
 
 const Title = styled.h1`
   font-family: 'Poppins', sans-serif;
@@ -37,22 +26,11 @@ const Title = styled.h1`
 `;
 
 const logos = {
-  SCH: SCH_logo,
-  PAB: PAB_logo,
-  DX1: DX1_logo,
-  QUE: QUE_logo,
-  SSO: SSO_logo,
-  ANT: ANT_logo,
-  EXP: EXP_logo,
-  TAR: TAR_logo,
-  GHO: GHO_logo,
-  BAS: BAS_logo,
-  ARQ: ARQ_logo,
-  HDV: HDV_logo,
-  RAM: RAM_logo,
-  EVS: EVS_logo,
-  ADO: ADO_logo,
-  PMA: PMA_logo,
+  BIM: BIM_logo,
+  NOT: NOT_logo,
+  MAL: MAL_logo,
+  MUC: MUC_logo,
+  DES: DES_logo,
 };
 
 const getLogo = (id) => {
@@ -67,7 +45,7 @@ const Estadisticas = () => {
   const [equiposMenosGoleados, setEquiposMenosGoleados] = useState([]);
 
   useEffect(() => {
-    Papa.parse('/jugadores_masc.csv', {
+    Papa.parse('/jugadoras_fem.csv', {
       download: true,
       header: true,
       complete: (result) => {
@@ -76,7 +54,7 @@ const Estadisticas = () => {
       },
     });
 
-    Papa.parse('/equipos_masc.csv', {
+    Papa.parse('/equipos_fem.csv', {
       download: true,
       header: true,
       complete: (result) => {
@@ -116,9 +94,9 @@ const Estadisticas = () => {
       </Title>
       <main className="flex-1 py-8 px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Goleadores */}
+          {/* Goleadoras */}
           <div className="bg-gray-900 rounded-lg shadow-md p-6">
-            <h2 className="text-4xl font-bold mb-4">Goleadores</h2>
+            <h2 className="text-4xl font-bold mb-4">Goleadoras</h2>
             <div className="space-y-6">
               {topGoleadores.map((jugador, index) => (
                 <div key={index} className="flex items-center justify-between">

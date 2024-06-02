@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
-import PMA_logo from '../../../assets/images/PMA_icon.webp';
+import SSO_logo from '../../../assets/images/SSO_icon.webp';
 
-const PMA = () => {
+const SSO = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
@@ -45,7 +45,7 @@ const PMA = () => {
       return data.filter(item => item.ID === id);
     };
 
-    const datosFiltrados = filtrarPorId('PMA');
+    const datosFiltrados = filtrarPorId('SSO');
 
     const jugadoresObj = {};
     datosFiltrados.forEach((item, index) => {
@@ -62,13 +62,13 @@ const PMA = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="text-white py-4 px-6 mb-8">
-        <h1 className="text-5xl font-bold text-center">Poca Magia F. C.</h1>
+        <h1 className="text-5xl font-bold text-center">San Sócalo</h1>
       </header>
       <div className="flex justify-center items-center w-full h-50">
         <img
           alt="Team Logo"
           height={200}
-          src={PMA_logo}
+          src={SSO_logo}
           width={200}
         />
       </div>
@@ -94,4 +94,4 @@ const PMA = () => {
   );
 };
 
-export default PMA;
+export default SSO;

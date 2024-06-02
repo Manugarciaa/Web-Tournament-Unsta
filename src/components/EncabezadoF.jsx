@@ -1,12 +1,13 @@
 import { useState } from "react";
 import UNSTA_logo from "../assets/UNSTA.png";
 import { close, menu } from "../assets";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export const navLinks = [
   { id: "partidos", title: "Partidos", to: "/femenino/partidos" },
   { id: "equipos", title: "Equipos", to: "/femenino/equipos" },
   { id: "fase_de_grupos", title: "Fase de grupos", to: "/femenino/fase_de_grupos" },
+  { id: "cuadro_de_eliminatorias", title: "Cuadro de eliminatorias", to: "/femenino/cuadro_de_eliminatorias" },
   { id: "estadisticas", title: "Estadísticas", to: "/femenino/estadisticas" },
   { id: "masculino", title: "Masculino", to: "/masculino/partidos" },
 ];
@@ -14,6 +15,7 @@ export const navLinks = [
 const EncabezadoF = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
+
   const handleNavClick = (title) => {
     setActive(title);
     setToggle(false);
@@ -28,8 +30,10 @@ const EncabezadoF = () => {
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+            className={`font-poppins font-normal cursor-pointer text-[16px] ${
+              active === nav.title ? "text-white" : "text-dimWhite"
+            } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+            style={nav.id === "masculino" ? { color: '#3489eb' } : {}}
           >
             <Link to={nav.to} onClick={() => handleNavClick(nav.title)}>{nav.title}</Link>
           </li>
@@ -45,15 +49,18 @@ const EncabezadoF = () => {
         />
 
         <div
-          className={`${!toggle ? "hidden" : "flex"
-            } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          className={`${
+            !toggle ? "hidden" : "flex"
+          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"
-                  } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  active === nav.title ? "text-white" : "text-dimWhite"
+                } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                style={nav.id === "masculino" ? { color: '#3489eb' } : {}}
               >
                 <Link to={nav.to} onClick={() => handleNavClick(nav.title)}>{nav.title}</Link>
               </li>

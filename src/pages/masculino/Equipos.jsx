@@ -5,12 +5,13 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { IoArrowBackOutline, IoArrowForwardOutline } from 'react-icons/io5';
 
 import SCH_logo from '../../assets/images/SCH_logo.webp';
 import PAB_logo from '../../assets/images/PAB_logo.webp';
 import DX1_logo from '../../assets/images/DX1_logo.webp';
 import QUE_logo from '../../assets/images/QUE_logo.webp';
-import SZO_logo from '../../assets/images/SZO_logo.webp';
+import SSO_logo from '../../assets/images/SSO_logo.webp';
 import ANT_logo from '../../assets/images/ANT_logo.webp';
 import EXP_logo from '../../assets/images/EXP_logo.webp';
 import TAR_logo from '../../assets/images/TAR_logo.webp';
@@ -29,7 +30,7 @@ const equipos = [
   { id: 2, nombre: 'Pabellón A', logo: PAB_logo, abreviatura: 'PAB' },
   { id: 3, nombre: 'Dominio X+1', logo: DX1_logo, abreviatura: 'DX1' },
   { id: 4, nombre: 'El Queme', logo: QUE_logo, abreviatura: 'QUE' },
-  { id: 5, nombre: 'San Zócalo', logo: SZO_logo, abreviatura: 'SZO' },
+  { id: 5, nombre: 'San Sócalo', logo: SSO_logo, abreviatura: 'SSO' },
   { id: 6, nombre: 'Anti Canva F. C.', logo: ANT_logo, abreviatura: 'ANT' },
   { id: 7, nombre: 'Expensive Bottles', logo: EXP_logo, abreviatura: 'EXP' },
   { id: 8, nombre: 'Tartagal F. C.', logo: TAR_logo, abreviatura: 'TAR' },
@@ -57,7 +58,7 @@ function Equipos() {
   };
 
   return (
-    <div>
+    <div className="equipos-container" style={{ height: '100vh' }}>
       <h1 className="w-full font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-2 text-center">
         <span className="text-gradient">Equipos</span>
       </h1>
@@ -93,7 +94,6 @@ function Equipos() {
         className="swiper_container"
         onSlideChange={handleSlideChange}
         onInit={(swiper) => {
-          // Inicializar con el primer equipo
           setCurrentEquipo(equipos[swiper.realIndex % equipos.length].nombre);
         }}
       >
@@ -107,11 +107,11 @@ function Equipos() {
           </SwiperSlide>
         ))}
         <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+          <div className="swiper-button-prev text-black slider-arrow">
+            <IoArrowBackOutline size={12} />
           </div>
-          <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
+          <div className="swiper-button-next text-black slider-arrow">
+            <IoArrowForwardOutline size={12} />
           </div>
           <div className="swiper-pagination"></div>
         </div>

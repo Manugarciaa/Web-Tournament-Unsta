@@ -1,41 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
 import TBD_logo from '../../assets/images/TBD_icon.webp';
-import SCH_logo from '../../assets/images/SCH_icon.webp';
-import PAB_logo from '../../assets/images/PAB_icon.webp';
-import DX1_logo from '../../assets/images/DX1_icon.webp';
-import QUE_logo from '../../assets/images/QUE_icon.webp';
-import SSO_logo from '../../assets/images/SSO_icon.webp';
-import ANT_logo from '../../assets/images/ANT_icon.webp';
-import EXP_logo from '../../assets/images/EXP_icon.webp';
-import TAR_logo from '../../assets/images/TAR_icon.webp';
-import GHO_logo from '../../assets/images/GHO_icon.webp';
-import BAS_logo from '../../assets/images/BAS_icon.webp';
-import ARQ_logo from '../../assets/images/ARQ_icon.webp';
-import HDV_logo from '../../assets/images/HDV_icon.webp';
-import RAM_logo from '../../assets/images/RAM_icon.webp';
-import EVS_logo from '../../assets/images/EVS_icon.webp';
-import ADO_logo from '../../assets/images/ADO_icon.webp';
-import PMA_logo from '../../assets/images/PMA_icon.webp';
+import BIM_logo from '../../assets/images/BIM_icon.webp';
+import NOT_logo from '../../assets/images/NOT_icon.webp';
+import MAL_logo from '../../assets/images/MAL_icon.webp';
+import MUC_logo from '../../assets/images/MUC_icon.webp';
+import DES_logo from '../../assets/images/DES_icon.webp';
 
 const logos = {
   TBD: TBD_logo,
-  SCH: SCH_logo,
-  PAB: PAB_logo,
-  DX1: DX1_logo,
-  QUE: QUE_logo,
-  SSO: SSO_logo,
-  ANT: ANT_logo,
-  EXP: EXP_logo,
-  TAR: TAR_logo,
-  GHO: GHO_logo,
-  BAS: BAS_logo,
-  ARQ: ARQ_logo,
-  HDV: HDV_logo,
-  RAM: RAM_logo,
-  EVS: EVS_logo,
-  ADO: ADO_logo,
-  PMA: PMA_logo,
+  BIM: BIM_logo,
+  NOT: NOT_logo,
+  MAL: MAL_logo,
+  MUC: MUC_logo,
+  DES: DES_logo,
 };
 
 const getLogo = (id) => {
@@ -83,16 +61,12 @@ const GroupTable = ({ groupName, teams }) => {
                       <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
                   ) : index < 4 ? (
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-400 to-gray-00 shadow-md">
-                      <span className="text-white font-bold text-lg">{index + 1}</span>
-                    </div>
-                  ) : index < 6 ? (
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-00 shadow-md">
                       <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-white to-gray-400 shadow-md">
-                      <span className="flex items-center justify-center h-full text-black font-bold text-lg">{index + 1}</span>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full">
+                      <span className="text-white flex items-center justify-center h-full text-black font-bold text-lg">{index + 1}</span>
                     </div>
                   )}
                 </td>
@@ -129,7 +103,7 @@ const FaseDeGrupos = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/fase_grupos_masc.csv');
+        const response = await fetch('/fase_grupos_fem.csv');
         if (!response.ok) {
           throw new Error('No se pudo cargar el archivo CSV');
         }
@@ -158,28 +132,12 @@ const FaseDeGrupos = () => {
     fetchData();
   }, []);
 
-  const grupoA = data.filter(item => item.Grupo === 'Grupo A');
-  const grupoB = data.filter(item => item.Grupo === 'Grupo B');
+  const grupoA = data.filter(item => item.Grupo === 'Tabla');
   
   const groups = [
     {
-      groupName: 'Grupo A',
+      groupName: 'Tabla',
       teams: grupoA.map((item) => ({
-        name: item.Equipo,
-        points: item.Pts,
-        played: item.PJ,
-        won: item.PG,
-        drawn: item.PE,
-        lost: item.PP,
-        goalsFor: item.GF,
-        goalsAgainst: item.GC,
-        goalDifference: item['Dif'],
-        logo: getLogo(item.ID)
-      })),
-    },
-    {
-      groupName: 'Grupo B',
-      teams: grupoB.map((item) => ({
         name: item.Equipo,
         points: item.Pts,
         played: item.PJ,

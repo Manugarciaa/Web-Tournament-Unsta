@@ -11,7 +11,7 @@ const RAM = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/jugadores.csv');
+        const response = await fetch('/jugadores_masc.csv');
         if (!response.ok) {
           throw new Error('No se pudo cargar el archivo CSV');
         }
@@ -60,7 +60,7 @@ const RAM = () => {
   if (error) return <div style={{ color: 'red' }}>{error}</div>;
 
   return (
-    <div className="bg-[#23282D] min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <header className="text-white py-4 px-6 mb-8">
         <h1 className="text-5xl font-bold text-center">Rama y sus Ramitas</h1>
       </header>

@@ -1,22 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
 import styled from 'styled-components';
-import SCH_logo from '../../assets/images/SCH_icon.webp';
-import PAB_logo from '../../assets/images/PAB_icon.webp';
-import DX1_logo from '../../assets/images/DX1_icon.webp';
-import QUE_logo from '../../assets/images/QUE_icon.webp';
-import SSO_logo from '../../assets/images/SSO_icon.webp';
-import ANT_logo from '../../assets/images/ANT_icon.webp';
-import EXP_logo from '../../assets/images/EXP_icon.webp';
-import TAR_logo from '../../assets/images/TAR_icon.webp';
-import GHO_logo from '../../assets/images/GHO_icon.webp';
-import BAS_logo from '../../assets/images/BAS_icon.webp';
-import ARQ_logo from '../../assets/images/ARQ_icon.webp';
-import HDV_logo from '../../assets/images/HDV_icon.webp';
-import RAM_logo from '../../assets/images/RAM_icon.webp';
-import EVS_logo from '../../assets/images/EVS_icon.webp';
-import ADO_logo from '../../assets/images/ADO_icon.webp';
-import PMA_logo from '../../assets/images/PMA_icon.webp';
+import BIM_logo from '../../assets/images/BIM_logo.webp';
+import NOT_logo from '../../assets/images/NOT_logo.webp';
+import MAL_logo from '../../assets/images/MAL_logo.webp';
+import MUC_logo from '../../assets/images/MUC_logo.webp';
+import DES_logo from '../../assets/images/DES_logo.webp';
 import TBD_logo from '../../assets/images/TBD_icon.webp';
 
 const PartidoCard = styled.div`
@@ -81,16 +70,12 @@ const Etapa = styled.div`
   text-align: center;
   transform: translateX(-50%);
   ${props => {
-    if (props.descripcion.includes('Grupo A')) {
+    if (props.descripcion.includes('Jornada')) {
       return 'color: #008000; font-weight: bold;';
     } else if (props.descripcion.includes('oro')) {
       return 'color: #D4AC0D; font-weight: bold;';
-    } else if (props.descripcion.includes('plata')) {
-      return 'color: #515A5A; font-weight: bold;';
     } else if (props.descripcion.includes('bronce')) {
       return 'color: #BA4A00; font-weight: bold;';
-    } else if (props.descripcion.includes('aluminio')) {
-      return 'color: #888888; font-weight: bold;';
     } else {
       return 'color: #ff0000; font-weight: bold;';
     }
@@ -99,22 +84,11 @@ const Etapa = styled.div`
 
 const getLogoForTeam = (teamName) => {
   switch (teamName) {
-    case 'SCH': return SCH_logo;
-    case 'PAB': return PAB_logo;
-    case 'DX1': return DX1_logo;
-    case 'QUE': return QUE_logo;
-    case 'SSO': return SSO_logo;
-    case 'ANT': return ANT_logo;
-    case 'EXP': return EXP_logo;
-    case 'TAR': return TAR_logo;
-    case 'GHO': return GHO_logo;
-    case 'BAS': return BAS_logo;
-    case 'ARQ': return ARQ_logo;
-    case 'HDV': return HDV_logo;
-    case 'RAM': return RAM_logo;
-    case 'EVS': return EVS_logo;
-    case 'ADO': return ADO_logo;
-    case 'PMA': return PMA_logo;
+    case 'BIM': return BIM_logo;
+    case 'NOT': return NOT_logo;
+    case 'MAL': return MAL_logo;
+    case 'MUC': return MUC_logo;
+    case 'DES': return DES_logo;
     default: return TBD_logo;
   }
 };
@@ -180,7 +154,7 @@ const Partidos = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/partidos_masc.csv');
+        const response = await fetch('/partidos_fem.csv');
         if (!response.ok) {
           throw new Error('No se pudo cargar el archivo CSV');
         }
@@ -215,15 +189,15 @@ const Partidos = () => {
   const groupedMatches = [
     {
       title: "Jornada 1 - Fase de grupos",
-      matches: data.slice(0, 12)
+      matches: data.slice(0, 5)
     },
     {
       title: "Jornada 2 - Fase de grupos",
-      matches: data.slice(12, 24)
+      matches: data.slice(5, 10)
     },
     {
       title: "Jornada 3 - Eliminatorias",
-      matches: data.slice(24)
+      matches: data.slice(10)
     }
   ];
 
