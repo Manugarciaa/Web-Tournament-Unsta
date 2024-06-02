@@ -1,176 +1,176 @@
-ID,Equipo,Nombre,Apellido,Carrera
-DX1,Dominio X+1,Benjamín José,Robles Terán,Ingeniería Industrial
-DX1,Dominio X+1,Evaristo,Cornet,Ingeniería Industrial
-DX1,Dominio X+1,Agustín,Mollica,Ingeniería Industrial
-DX1,Dominio X+1,Tomás,Pérez Cisterna,Ingeniería Industrial
-DX1,Dominio X+1,Simón,Stok,Ingeniería Industrial
-DX1,Dominio X+1,Tomás,Náder,Ingeniería Industrial
-DX1,Dominio X+1,Santiago,Svaluto Ferro,Ingeniería Industrial
-DX1,Dominio X+1,Juan Ignacio,Vitale,Ingeniería Informática
-DX1,Dominio X+1,Matías,Castro,Ingeniería Industrial
-DX1,Dominio X+1,Gastón,Paz Posse,Ingeniería Industrial
-DX1,Dominio X+1,Miguel Francisco Martín,Robinson,Ingeniería Industrial
-DX1,Dominio X+1,Gonzalo Mario,Pasqualini Cornejo,Ingeniería Industrial
-GHO,Ghostbusters,Mariano Nicolás,Martín Piovesán,Ingeniería Informática
-GHO,Ghostbusters,Santiago Manuel,González Fernández,Ingeniería Informática
-GHO,Ghostbusters,José Ignacio,Tula Molina,Ingeniería Informática
-GHO,Ghostbusters,Santiago Tomás,Delgado,Ingeniería Informática
-GHO,Ghostbusters,Cayetano,Rufino,Bioingeniería
-GHO,Ghostbusters,José Ignacio,Andrade,Bioingeniería
-GHO,Ghostbusters,Mariano,Peralta Montero,Ingeniería Informática
-GHO,Ghostbusters,Julio Gerardo,Monteros,Ingeniería en Inteligencia Artificial
-GHO,Ghostbusters,Simón Ezequiel,Lazarte,Ingeniería Industrial
-GHO,Ghostbusters,Ezequiel Nicolás,Lescano Medina,Ingeniería Informática
-GHO,Ghostbusters,Patricio,Cancellieri,Ingeniería en Inteligencia Artificial
-SZO,San Zócalo,Alfredo Anadón,Molina Palazzo,Ingeniería Industrial
-SZO,San Zócalo,Mateo Gustavo,Antenucci,Ingeniería Informática
-SZO,San Zócalo,Leandro Ezequiel,Sosa,Ingeniería Informática
-SZO,San Zócalo,Luciano,Grosso,Ingeniería Informática
-SZO,San Zócalo,Matías,Marengo,Ingeniería Informática
-SZO,San Zócalo,Gerónimo,Ríos Antenucci,Ingeniería Informática
-SZO,San Zócalo,Ignacio,Albarracín,Ingeniería Informática
-SZO,San Zócalo,Juan Ignacio,Galilea,Ingeniería Informática
-SZO,San Zócalo,Rafael,Alcázar,Ingeniería Informática
-SZO,San Zócalo,Santiago,Alcázar,Bioingeniería
-BAS,Bastardos de Richard,Ramiro José,Patrón Uriburu,Ingeniería Industrial
-BAS,Bastardos de Richard,Pablo,Torino,Ingeniería Industrial
-BAS,Bastardos de Richard,Franco Miguel,Ruiz Beddur,Ingeniería Industrial
-BAS,Bastardos de Richard,Valentino,Garlati,Ingeniería Industrial
-BAS,Bastardos de Richard,Ignacio,de Zuasnábar,Ingeniería Industrial
-BAS,Bastardos de Richard,Juan Pablo,D'Andrea,Ingeniería Industrial
-BAS,Bastardos de Richard,Facundo Gustavo,Córdoba,Ingeniería Industrial
-BAS,Bastardos de Richard,Manuel,Martínez Zavalía,Ingeniería Industrial
-BAS,Bastardos de Richard,Martín Ignacio,Perea,Ingeniería Industrial
-BAS,Bastardos de Richard,Tomás,Reguera,Ingeniería Industrial
-BAS,Bastardos de Richard,José Agustín,Poviña,Ingeniería Industrial
-BAS,Bastardos de Richard,Nicolás,Martínez Zavalía,Ingeniería Industrial
-SCH,Schalke 23,Mateo Lautaro,Torresín,Ingeniería en Inteligencia Artificial
-SCH,Schalke 23,Elio Leandro,Granito,Ingeniería en Inteligencia Artificial
-SCH,Schalke 23,Lucas,Cruz,Ingeniería Industrial
-SCH,Schalke 23,Alejo,Morof,Ingeniería Industrial
-SCH,Schalke 23,Matías,Deheza,Ingeniería Informática
-SCH,Schalke 23,Julio Agustín,Martensen,Ingeniería en Inteligencia Artificial
-SCH,Schalke 23,Juan Manuel,More Sáez,Ingeniería Informática
-SCH,Schalke 23,Sergio Martín,Guanco,Ingeniería en Inteligencia Artificial
-SCH,Schalke 23,Matías Alejandro,Chalín,Ingeniería en Inteligencia Artificial
-SCH,Schalke 23,Santiago,Vera Robinson,Ingeniería Informática
-SCH,Schalke 23,Tyago,Peralta Moroni,Tecnicatura en Desarrollo y Calidad de Software
-ARQ,Arquero Fantasma,Facundo José,Cesca Varela,Ingeniería Industrial
-ARQ,Arquero Fantasma,Santiago,Eskinazi,Ingeniería Industrial
-ARQ,Arquero Fantasma,Santino,Missaglia,Ingeniería Industrial
-ARQ,Arquero Fantasma,Ezequiel,Mafud,Ingeniería Industrial
-ARQ,Arquero Fantasma,Martín,Posse,Ingeniería Industrial
-ARQ,Arquero Fantasma,José,Valdez Naval,Contador Público
-ARQ,Arquero Fantasma,Guillermo Ezequiel,Cadenas,Ingeniería Industrial
-ARQ,Arquero Fantasma,Gerónimo,Cautelier,Ingeniería Industrial
-ARQ,Arquero Fantasma,Juan Bautista,Reyes,Ingeniería Informática
-ARQ,Arquero Fantasma,Juan Pablo,Rivero Manganelli,Ingeniería Industrial
-ARQ,Arquero Fantasma,Facundo,Delani,Ingeniería Industrial
-EXP,Expensive Bottles,Juan Pablo,Benedetti,Tecnicatura en Desarrollo y Calidad de Software
-EXP,Expensive Bottles,Valentín,Villalba,Tecnicatura en Desarrollo y Calidad de Software
-EXP,Expensive Bottles,Agustín,Chávez,Licenciatura en Marketing
-EXP,Expensive Bottles,Pablo Eugenio,Cruzado Sujeros,Tecnicatura en Desarrollo y Calidad de Software
-EXP,Expensive Bottles,Facundo José,Tapia,Tecnicatura en Desarrollo y Calidad de Software
-EXP,Expensive Bottles,Santiago,Navarro,Tecnicatura en Desarrollo y Calidad de Software
-EXP,Expensive Bottles,Jesús Ignacio,Gómez,Tecnicatura en Desarrollo y Calidad de Software
-EXP,Expensive Bottles,Alejandro,González Teseyra,Tecnicatura en Desarrollo y Calidad de Software
-EXP,Expensive Bottles,Mateo,Quintana,Tecnicatura en Desarrollo y Calidad de Software
-EXP,Expensive Bottles,Mateo Andrés,Ávila,Tecnicatura en Desarrollo y Calidad de Software
-HDV,Herederos de Vega,Lucas Benjamín,D'Pinto,Ingeniería Industrial
-HDV,Herederos de Vega,Luciano Ignacio,Pérez,Ingeniería Industrial
-HDV,Herederos de Vega,Lucas David,Lucena Bepre,Tecnicatura en Desarrollo y Calidad de Software
-HDV,Herederos de Vega,Daniel Antonio,Vildoza,Ingeniería Informática
-HDV,Herederos de Vega,Joaquín Nasche,Cabrera,Ingeniería Industrial
-HDV,Herederos de Vega,Fernando Gastón,Ferreyra,Ingeniería Industrial
-HDV,Herederos de Vega,Emilio Matías,Fiad,Ingeniería Industrial
-HDV,Herederos de Vega,Lucas,Palomeque,Ingeniería Informática
-HDV,Herederos de Vega,Simón Alfredo,Serrano,Ingeniería Industrial
-HDV,Herederos de Vega,Lucas Gabriel,Vega,Ingeniería Informática
-HDV,Herederos de Vega,Lucas Joel,Alderete,Contador Público
-HDV,Herederos de Vega,Aldo Martín,Alarcón,Contador Público
-RAM,Rama y sus Ramitas,Mario Alejandro,Álvarez,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Tiziano,Carranza,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Manuel Ricardo,Valdez,Ingeniería Informática
-RAM,Rama y sus Ramitas,Agustín,Caferro,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Álvaro Gastón,Ybáñez,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Juan Antonio,Cardizzi,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Patricio Daniel,Campopiano,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Sebastián,Brahim Estigarribia,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Matías,Arguijo,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Ramiro Ezequiel,Figueroa de la Cruz,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Juan Ignacio,Reina,Tecnicatura en Desarrollo y Calidad de Software
-RAM,Rama y sus Ramitas,Martín,Fort,Tecnicatura en Desarrollo y Calidad de Software
-PAB,Pabellón A,Pedro,Cabrera,Ingeniería Industrial
-PAB,Pabellón A,Valentino Francisco Gabriel,Delgado,Ingeniería Industrial
-PAB,Pabellón A,Santino,Spelzini,Ingeniería Industrial
-PAB,Pabellón A,Juan Luis,García García,Ingeniería Industrial
-PAB,Pabellón A,Nicolás José,Casanova,Ingeniería Industrial
-PAB,Pabellón A,Facundo,Olarte,Ingeniería Industrial
-PAB,Pabellón A,Nahuel Alejandro,Álvarez Prado,Ingeniería Industrial
-PAB,Pabellón A,Juan Carlos,Antoni,Ingeniería Industrial
-PAB,Pabellón A,Leonardo,Corán,Ingeniería Industrial
-PAB,Pabellón A,Guillermo José,Frontini,Ingeniería Industrial
-PAB,Pabellón A,René Mario,Goane,Ingeniería Industrial
-TAR,Tartagal F. C.,Tomás,Farolfi,Ingeniería Industrial
-TAR,Tartagal F. C.,Alesio Fabio,Palavecino Romero,Ingeniería Industrial
-TAR,Tartagal F. C.,Rafael Joaquín,Gijena,Ingeniería Industrial
-TAR,Tartagal F. C.,Luciano Isaías,Zolohaga,Ingeniería Informática
-TAR,Tartagal F. C.,Lucas,Vázquez,Ingeniería Industrial
-TAR,Tartagal F. C.,Franco Nicolás,Olleta Loza,Ingeniería Industrial
-TAR,Tartagal F. C.,Tomás,Ruiz Sant,Ingeniería Industrial
-TAR,Tartagal F. C.,José Antonio,Díaz Monje,Ingeniería Ambiental
-TAR,Tartagal F. C.,Juan Carlos,Augier,Ingeniería Industrial
-ANT,Anti Canva F. C.,Lautaro,Rodríguez Bichara,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Jesús Leonel,Gómez,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Nicolás,Chamut,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Giovanni,Pedrotti,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Máximo Santiago,Rosales,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Gonzalo Augusto,Rea,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Gastón,Sánchez,Licenciatura en Diseño Gráfico
-ANT,Anti Canva F. C.,Germán Ariel,Velarde,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Augusto Samuel,Escalante,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Andrés Pío,Parravicini,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Marcelo,Aguilera,Licenciatura en Diseño Multimedial
-ANT,Anti Canva F. C.,Máximo Asael,Monzón,Licenciatura en Diseño Multimedial
-EVS,Evolutions F. C.,Santiago,Marís,Ingeniería Industrial
-EVS,Evolutions F. C.,Juan Martín,Méndez,Ingeniería Industrial
-EVS,Evolutions F. C.,Gerónimo,Colombres,Ingeniería Industrial
-EVS,Evolutions F. C.,Sergio Luis,Piga,Ingeniería Industrial
-EVS,Evolutions F. C.,Aldo Martín,Capuano,Ingeniería Informática
-EVS,Evolutions F. C.,Ignacio,Dumont Castellote,Ingeniería Industrial
-EVS,Evolutions F. C.,Arturo Domingo,Ponsati,Ingeniería Industrial
-EVS,Evolutions F. C.,Gonzalo,Paz Zavalía,Ingeniería Industrial
-EVS,Evolutions F. C.,Patricio,Montanari,Ingeniería Industrial
-EVS,Evolutions F. C.,José Agustín,Veiga Zermoglio,Licenciatura en Psicología
-EVS,Evolutions F. C.,Augusto José,Parra,Licenciatura en Administración de Empresas
-ADO,Adobe F. C.,Lucas Sebastián,Muhala,Licenciatura en Diseño Multimedial
-ADO,Adobe F. C.,Adriano Samir,Fote,Licenciatura en Diseño Multimedial
-ADO,Adobe F. C.,Fernando Matteo,Manfredi,Licenciatura en Diseño Multimedial
-ADO,Adobe F. C.,Matías Alejandro,Calazanz,Licenciatura en Diseño Gráfico
-ADO,Adobe F. C.,Nicolás Emanuel,Garbi Parra,Licenciatura en Diseño Multimedial
-ADO,Adobe F. C.,Maximiliano,Urquiza,Licenciatura en Diseño Multimedial
-ADO,Adobe F. C.,Leandro,Ucciardello,Licenciatura en Diseño Multimedial
-ADO,Adobe F. C.,Facundo,Leguizamón,Licenciatura en Diseño Gráfico
-ADO,Adobe F. C.,Agustín,Prados,Licenciatura en Diseño Multimedial
-ADO,Adobe F. C.,Lucas Luciano Anahel,Páez Gutiérrez,Licenciatura en Diseño Gráfico
-QUE,El Queme,Benjamín Misael,Tejeda,Ingeniería Industrial
-QUE,El Queme,Haziel Giuliano,Zazzetti,Ingeniería Industrial
-QUE,El Queme,Germán,Dohrman,Ingeniería Industrial
-QUE,El Queme,Fabricio,Herrera,Tecnicatura en Desarrollo y Calidad de Software
-QUE,El Queme,Matías,Vigo,Ingeniería Industrial
-QUE,El Queme,Lucas Gabriel,Medina,Ingeniería Industrial
-QUE,El Queme,Joaquín Martín,Cejas,Ingeniería Industrial
-QUE,El Queme,Tomás,Ferreyra,Ingeniería Ambiental
-QUE,El Queme,Mateo,Noguera,Ingeniería Industrial
-QUE,El Queme,Gustavo,Ruiz Isa,Ingeniería Industrial
-PMA,Poca Magia F. C.,Bernardo,Guberman,Ingeniería Industrial
-PMA,Poca Magia F. C.,Guillermo Agustín,Chaya Terrazas,Ingeniería Industrial
-PMA,Poca Magia F. C.,Salvador,Bunge,Ingeniería Industrial
-PMA,Poca Magia F. C.,Jorge Rolando,Quinteros Nelle,Ingeniería Industrial
-PMA,Poca Magia F. C.,Máximo Gonzalo,Gómez,Ingeniería Informática
-PMA,Poca Magia F. C.,Guillermo David,Delgado,Ingeniería Industrial
-PMA,Poca Magia F. C.,Cristian Tomás,Albornoz Ortiz,Ingeniería Industrial
-PMA,Poca Magia F. C.,Cristian Javier,Ordóñez Clemente,Ingeniería Industrial
-PMA,Poca Magia F. C.,Ezequías,Quinteros Tacconi,Ingeniería Industrial
-PMA,Poca Magia F. C.,Alejandro Ariel,Laroz,Ingeniería Informática
-PMA,Poca Magia F. C.,Francisco Gabriel,Parano,Ingeniería Industrial
+ID,Equipo,Nombre,Apellido,Carrera,Goles
+DX1,Dominio X+1,Benjamín José,Robles Terán,Ingeniería Industrial,10
+DX1,Dominio X+1,Evaristo,Cornet,Ingeniería Industrial,
+DX1,Dominio X+1,Agustín,Mollica,Ingeniería Industrial,
+DX1,Dominio X+1,Tomás,Pérez Cisterna,Ingeniería Industrial,
+DX1,Dominio X+1,Simón,Stok,Ingeniería Industrial,
+DX1,Dominio X+1,Tomás,Náder,Ingeniería Industrial,
+DX1,Dominio X+1,Santiago,Svaluto Ferro,Ingeniería Industrial,
+DX1,Dominio X+1,Juan Ignacio,Vitale,Ingeniería Informática,
+DX1,Dominio X+1,Matías,Castro,Ingeniería Industrial,
+DX1,Dominio X+1,Gastón,Paz Posse,Ingeniería Industrial,
+DX1,Dominio X+1,Miguel Francisco Martín,Robinson,Ingeniería Industrial,
+DX1,Dominio X+1,Gonzalo Mario,Pasqualini Cornejo,Ingeniería Industrial,
+GHO,Ghostbusters,Mariano Nicolás,Martín Piovesán,Ingeniería Informática,5
+GHO,Ghostbusters,Santiago Manuel,González Fernández,Ingeniería Informática,5
+GHO,Ghostbusters,José Ignacio,Tula Molina,Ingeniería Informática,
+GHO,Ghostbusters,Santiago Tomás,Delgado,Ingeniería Informática,
+GHO,Ghostbusters,Cayetano,Rufino,Bioingeniería,
+GHO,Ghostbusters,José Ignacio,Andrade,Bioingeniería,
+GHO,Ghostbusters,Mariano,Peralta Montero,Ingeniería Informática,
+GHO,Ghostbusters,Julio Gerardo,Monteros,Ingeniería en Inteligencia Artificial,
+GHO,Ghostbusters,Simón Ezequiel,Lazarte,Ingeniería Industrial,
+GHO,Ghostbusters,Ezequiel Nicolás,Lescano Medina,Ingeniería Informática,
+GHO,Ghostbusters,Patricio,Cancellieri,Ingeniería en Inteligencia Artificial,
+SZO,San Zócalo,Alfredo Anadón,Molina Palazzo,Ingeniería Industrial,3
+SZO,San Zócalo,Mateo Gustavo,Antenucci,Ingeniería Informática,3
+SZO,San Zócalo,Leandro Ezequiel,Sosa,Ingeniería Informática,3
+SZO,San Zócalo,Luciano,Grosso,Ingeniería Informática,
+SZO,San Zócalo,Matías,Marengo,Ingeniería Informática,
+SZO,San Zócalo,Gerónimo,Ríos Antenucci,Ingeniería Informática,
+SZO,San Zócalo,Ignacio,Albarracín,Ingeniería Informática,
+SZO,San Zócalo,Juan Ignacio,Galilea,Ingeniería Informática,
+SZO,San Zócalo,Rafael,Alcázar,Ingeniería Informática,
+SZO,San Zócalo,Santiago,Alcázar,Bioingeniería,
+BAS,Bastardos de Richard,Ramiro José,Patrón Uriburu,Ingeniería Industrial,2
+BAS,Bastardos de Richard,Pablo,Torino,Ingeniería Industrial,
+BAS,Bastardos de Richard,Franco Miguel,Ruiz Beddur,Ingeniería Industrial,
+BAS,Bastardos de Richard,Valentino,Garlati,Ingeniería Industrial,
+BAS,Bastardos de Richard,Ignacio,de Zuasnábar,Ingeniería Industrial,
+BAS,Bastardos de Richard,Juan Pablo,D'Andrea,Ingeniería Industrial,
+BAS,Bastardos de Richard,Facundo Gustavo,Córdoba,Ingeniería Industrial,
+BAS,Bastardos de Richard,Manuel,Martínez Zavalía,Ingeniería Industrial,
+BAS,Bastardos de Richard,Martín Ignacio,Perea,Ingeniería Industrial,
+BAS,Bastardos de Richard,Tomás,Reguera,Ingeniería Industrial,
+BAS,Bastardos de Richard,José Agustín,Poviña,Ingeniería Industrial,
+BAS,Bastardos de Richard,Nicolás,Martínez Zavalía,Ingeniería Industrial,
+SCH,Schalke 23,Mateo Lautaro,Torresín,Ingeniería en Inteligencia Artificial,1
+SCH,Schalke 23,Elio Leandro,Granito,Ingeniería en Inteligencia Artificial,1
+SCH,Schalke 23,Lucas,Cruz,Ingeniería Industrial,1
+SCH,Schalke 23,Alejo,Morof,Ingeniería Industrial,1
+SCH,Schalke 23,Matías,Deheza,Ingeniería Informática,
+SCH,Schalke 23,Julio Agustín,Martensen,Ingeniería en Inteligencia Artificial,
+SCH,Schalke 23,Juan Manuel,More Sáez,Ingeniería Informática,
+SCH,Schalke 23,Sergio Martín,Guanco,Ingeniería en Inteligencia Artificial,
+SCH,Schalke 23,Matías Alejandro,Chalín,Ingeniería en Inteligencia Artificial,
+SCH,Schalke 23,Santiago,Vera Robinson,Ingeniería Informática,
+SCH,Schalke 23,Tyago,Peralta Moroni,Tecnicatura en Desarrollo y Calidad de Software,
+ARQ,Arquero Fantasma,Facundo José,Cesca Varela,Ingeniería Industrial,
+ARQ,Arquero Fantasma,Santiago,Eskinazi,Ingeniería Industrial,
+ARQ,Arquero Fantasma,Santino,Missaglia,Ingeniería Industrial,
+ARQ,Arquero Fantasma,Ezequiel,Mafud,Ingeniería Industrial,
+ARQ,Arquero Fantasma,Martín,Posse,Ingeniería Industrial,
+ARQ,Arquero Fantasma,José,Valdez Naval,Contador Público,
+ARQ,Arquero Fantasma,Guillermo Ezequiel,Cadenas,Ingeniería Industrial,
+ARQ,Arquero Fantasma,Gerónimo,Cautelier,Ingeniería Industrial,
+ARQ,Arquero Fantasma,Juan Bautista,Reyes,Ingeniería Informática,
+ARQ,Arquero Fantasma,Juan Pablo,Rivero Manganelli,Ingeniería Industrial,
+ARQ,Arquero Fantasma,Facundo,Delani,Ingeniería Industrial,
+EXP,Expensive Bottles,Juan Pablo,Benedetti,Tecnicatura en Desarrollo y Calidad de Software,
+EXP,Expensive Bottles,Valentín,Villalba,Tecnicatura en Desarrollo y Calidad de Software,
+EXP,Expensive Bottles,Agustín,Chávez,Licenciatura en Marketing,
+EXP,Expensive Bottles,Pablo Eugenio,Cruzado Sujeros,Tecnicatura en Desarrollo y Calidad de Software,
+EXP,Expensive Bottles,Facundo José,Tapia,Tecnicatura en Desarrollo y Calidad de Software,
+EXP,Expensive Bottles,Santiago,Navarro,Tecnicatura en Desarrollo y Calidad de Software,
+EXP,Expensive Bottles,Jesús Ignacio,Gómez,Tecnicatura en Desarrollo y Calidad de Software,
+EXP,Expensive Bottles,Alejandro,González Teseyra,Tecnicatura en Desarrollo y Calidad de Software,
+EXP,Expensive Bottles,Mateo,Quintana,Tecnicatura en Desarrollo y Calidad de Software,
+EXP,Expensive Bottles,Mateo Andrés,Ávila,Tecnicatura en Desarrollo y Calidad de Software,
+HDV,Herederos de Vega,Lucas Benjamín,D'Pinto,Ingeniería Industrial,
+HDV,Herederos de Vega,Luciano Ignacio,Pérez,Ingeniería Industrial,
+HDV,Herederos de Vega,Lucas David,Lucena Bepre,Tecnicatura en Desarrollo y Calidad de Software,
+HDV,Herederos de Vega,Daniel Antonio,Vildoza,Ingeniería Informática,
+HDV,Herederos de Vega,Joaquín Nasche,Cabrera,Ingeniería Industrial,
+HDV,Herederos de Vega,Fernando Gastón,Ferreyra,Ingeniería Industrial,
+HDV,Herederos de Vega,Emilio Matías,Fiad,Ingeniería Industrial,
+HDV,Herederos de Vega,Lucas,Palomeque,Ingeniería Informática,
+HDV,Herederos de Vega,Simón Alfredo,Serrano,Ingeniería Industrial,
+HDV,Herederos de Vega,Lucas Gabriel,Vega,Ingeniería Informática,
+HDV,Herederos de Vega,Lucas Joel,Alderete,Contador Público,
+HDV,Herederos de Vega,Aldo Martín,Alarcón,Contador Público,
+RAM,Rama y sus Ramitas,Mario Alejandro,Álvarez,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Tiziano,Carranza,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Manuel Ricardo,Valdez,Ingeniería Informática,
+RAM,Rama y sus Ramitas,Agustín,Caferro,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Álvaro Gastón,Ybáñez,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Juan Antonio,Cardizzi,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Patricio Daniel,Campopiano,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Sebastián,Brahim Estigarribia,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Matías,Arguijo,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Ramiro Ezequiel,Figueroa de la Cruz,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Juan Ignacio,Reina,Tecnicatura en Desarrollo y Calidad de Software,
+RAM,Rama y sus Ramitas,Martín,Fort,Tecnicatura en Desarrollo y Calidad de Software,
+PAB,Pabellón A,Pedro,Cabrera,Ingeniería Industrial,
+PAB,Pabellón A,Valentino Francisco Gabriel,Delgado,Ingeniería Industrial,
+PAB,Pabellón A,Santino,Spelzini,Ingeniería Industrial,
+PAB,Pabellón A,Juan Luis,García García,Ingeniería Industrial,
+PAB,Pabellón A,Nicolás José,Casanova,Ingeniería Industrial,
+PAB,Pabellón A,Facundo,Olarte,Ingeniería Industrial,
+PAB,Pabellón A,Nahuel Alejandro,Álvarez Prado,Ingeniería Industrial,
+PAB,Pabellón A,Juan Carlos,Antoni,Ingeniería Industrial,
+PAB,Pabellón A,Leonardo,Corán,Ingeniería Industrial,
+PAB,Pabellón A,Guillermo José,Frontini,Ingeniería Industrial,
+PAB,Pabellón A,René Mario,Goane,Ingeniería Industrial,
+TAR,Tartagal F. C.,Tomás,Farolfi,Ingeniería Industrial,
+TAR,Tartagal F. C.,Alesio Fabio,Palavecino Romero,Ingeniería Industrial,
+TAR,Tartagal F. C.,Rafael Joaquín,Gijena,Ingeniería Industrial,
+TAR,Tartagal F. C.,Luciano Isaías,Zolohaga,Ingeniería Informática,
+TAR,Tartagal F. C.,Lucas,Vázquez,Ingeniería Industrial,
+TAR,Tartagal F. C.,Franco Nicolás,Olleta Loza,Ingeniería Industrial,
+TAR,Tartagal F. C.,Tomás,Ruiz Sant,Ingeniería Industrial,
+TAR,Tartagal F. C.,José Antonio,Díaz Monje,Ingeniería Ambiental,
+TAR,Tartagal F. C.,Juan Carlos,Augier,Ingeniería Industrial,
+ANT,Anti Canva F. C.,Lautaro,Rodríguez Bichara,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Jesús Leonel,Gómez,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Nicolás,Chamut,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Giovanni,Pedrotti,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Máximo Santiago,Rosales,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Gonzalo Augusto,Rea,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Gastón,Sánchez,Licenciatura en Diseño Gráfico,
+ANT,Anti Canva F. C.,Germán Ariel,Velarde,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Augusto Samuel,Escalante,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Andrés Pío,Parravicini,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Marcelo,Aguilera,Licenciatura en Diseño Multimedial,
+ANT,Anti Canva F. C.,Máximo Asael,Monzón,Licenciatura en Diseño Multimedial,
+EVS,Evolutions F. C.,Santiago,Marís,Ingeniería Industrial,
+EVS,Evolutions F. C.,Juan Martín,Méndez,Ingeniería Industrial,
+EVS,Evolutions F. C.,Gerónimo,Colombres,Ingeniería Industrial,
+EVS,Evolutions F. C.,Sergio Luis,Piga,Ingeniería Industrial,
+EVS,Evolutions F. C.,Aldo Martín,Capuano,Ingeniería Informática,
+EVS,Evolutions F. C.,Ignacio,Dumont Castellote,Ingeniería Industrial,
+EVS,Evolutions F. C.,Arturo Domingo,Ponsati,Ingeniería Industrial,
+EVS,Evolutions F. C.,Gonzalo,Paz Zavalía,Ingeniería Industrial,
+EVS,Evolutions F. C.,Patricio,Montanari,Ingeniería Industrial,
+EVS,Evolutions F. C.,José Agustín,Veiga Zermoglio,Licenciatura en Psicología,
+EVS,Evolutions F. C.,Augusto José,Parra,Licenciatura en Administración de Empresas,
+ADO,Adobe F. C.,Lucas Sebastián,Muhala,Licenciatura en Diseño Multimedial,
+ADO,Adobe F. C.,Adriano Samir,Fote,Licenciatura en Diseño Multimedial,
+ADO,Adobe F. C.,Fernando Matteo,Manfredi,Licenciatura en Diseño Multimedial,
+ADO,Adobe F. C.,Matías Alejandro,Calazanz,Licenciatura en Diseño Gráfico,
+ADO,Adobe F. C.,Nicolás Emanuel,Garbi Parra,Licenciatura en Diseño Multimedial,
+ADO,Adobe F. C.,Maximiliano,Urquiza,Licenciatura en Diseño Multimedial,
+ADO,Adobe F. C.,Leandro,Ucciardello,Licenciatura en Diseño Multimedial,
+ADO,Adobe F. C.,Facundo,Leguizamón,Licenciatura en Diseño Gráfico,
+ADO,Adobe F. C.,Agustín,Prados,Licenciatura en Diseño Multimedial,
+ADO,Adobe F. C.,Lucas Luciano Anahel,Páez Gutiérrez,Licenciatura en Diseño Gráfico,
+QUE,El Queme,Benjamín Misael,Tejeda,Ingeniería Industrial,
+QUE,El Queme,Haziel Giuliano,Zazzetti,Ingeniería Industrial,
+QUE,El Queme,Germán,Dohrman,Ingeniería Industrial,
+QUE,El Queme,Fabricio,Herrera,Tecnicatura en Desarrollo y Calidad de Software,
+QUE,El Queme,Matías,Vigo,Ingeniería Industrial,
+QUE,El Queme,Lucas Gabriel,Medina,Ingeniería Industrial,
+QUE,El Queme,Joaquín Martín,Cejas,Ingeniería Industrial,
+QUE,El Queme,Tomás,Ferreyra,Ingeniería Ambiental,
+QUE,El Queme,Mateo,Noguera,Ingeniería Industrial,
+QUE,El Queme,Gustavo,Ruiz Isa,Ingeniería Industrial,
+PMA,Poca Magia F. C.,Bernardo,Guberman,Ingeniería Industrial,
+PMA,Poca Magia F. C.,Guillermo Agustín,Chaya Terrazas,Ingeniería Industrial,
+PMA,Poca Magia F. C.,Salvador,Bunge,Ingeniería Industrial,
+PMA,Poca Magia F. C.,Jorge Rolando,Quinteros Nelle,Ingeniería Industrial,
+PMA,Poca Magia F. C.,Máximo Gonzalo,Gómez,Ingeniería Informática,
+PMA,Poca Magia F. C.,Guillermo David,Delgado,Ingeniería Industrial,
+PMA,Poca Magia F. C.,Cristian Tomás,Albornoz Ortiz,Ingeniería Industrial,
+PMA,Poca Magia F. C.,Cristian Javier,Ordóñez Clemente,Ingeniería Industrial,
+PMA,Poca Magia F. C.,Ezequías,Quinteros Tacconi,Ingeniería Industrial,
+PMA,Poca Magia F. C.,Alejandro Ariel,Laroz,Ingeniería Informática,
+PMA,Poca Magia F. C.,Francisco Gabriel,Parano,Ingeniería Industrial,

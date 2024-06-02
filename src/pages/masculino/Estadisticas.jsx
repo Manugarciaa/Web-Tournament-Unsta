@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Papa from 'papaparse';
 import SCH_logo from '../../assets/images/SCH_icon.webp';
 import PAB_logo from '../../assets/images/PAB_icon.webp';
 import DX1_logo from '../../assets/images/DX1_icon.webp';
@@ -16,146 +17,140 @@ import EVS_logo from '../../assets/images/EVS_icon.webp';
 import ADO_logo from '../../assets/images/ADO_icon.webp';
 import PMA_logo from '../../assets/images/PMA_icon.webp';
 
+const logos = {
+  SCH: SCH_logo,
+  PAB: PAB_logo,
+  DX1: DX1_logo,
+  QUE: QUE_logo,
+  SZO: SZO_logo,
+  ANT: ANT_logo,
+  EXP: EXP_logo,
+  TAR: TAR_logo,
+  GHO: GHO_logo,
+  BAS: BAS_logo,
+  ARQ: ARQ_logo,
+  HDV: HDV_logo,
+  RAM: RAM_logo,
+  EVS: EVS_logo,
+  ADO: ADO_logo,
+  PMA: PMA_logo,
+};
+
+const getLogo = (id) => {
+  return logos[id] || null;
+};
+
+const circleColors = ['bg-yellow-500', 'bg-gray-400', 'bg-yellow-300'];
+
 const Estadisticas = () => {
-  const equipos = [
-    { nombre: 'Dominio X+1', goles: 93, escudo: DX1_logo },
-    { nombre: 'Expensive Bottles', goles: 89, escudo: EXP_logo },
-    { nombre: 'Herederos de Vega', goles: 84, escudo: HDV_logo },
-    { nombre: 'San Zócalo', goles: 81, escudo: SZO_logo },
-    { nombre: 'El Queme', goles: 76, escudo: QUE_logo },
-    { nombre: 'Ghostbusters', goles: 75, escudo: GHO_logo },
-    { nombre: 'Bastardos de Richard', goles: 71, escudo: BAS_logo },
-    { nombre: 'Schalke 23', goles: 59, escudo: SCH_logo },
-    { nombre: 'Arquero Fantasma', goles: 55, escudo: ARQ_logo },
-    { nombre: 'Rama y sus Ramitas', goles: 55, escudo: RAM_logo },
-  ];
+  const [topGoleadores, setTopGoleadores] = useState([]);
+  const [topEquiposGoleadores, setTopEquiposGoleadores] = useState([]);
+  const [equiposMenosGoleados, setEquiposMenosGoleados] = useState([]);
+
+  useEffect(() => {
+    Papa.parse('/jugadores.csv', {
+      download: true,
+      header: true,
+      complete: (result) => {
+        const data = result.data;
+        calcularTopGoleadores(data);
+      },
+    });
+
+    Papa.parse('/equipos_masc.csv', {
+      download: true,
+      header: true,
+      complete: (result) => {
+        const data = result.data;
+        calcularTopEquipos(data);
+      },
+    });
+  }, []);
+
+  const calcularTopGoleadores = (data) => {
+    // Filtrar jugadores con goles válidos
+    const jugadoresConGoles = data.filter(jugador => jugador.Goles && jugador.Goles !== "null");
+
+    // Calcular top goleadores
+    const goleadores = [...jugadoresConGoles].sort((a, b) => b.Goles - a.Goles).slice(0, 10);
+    setTopGoleadores(goleadores);
+  };
+
+  const calcularTopEquipos = (data) => {
+    // Filtrar equipos con goles válidos
+    const equiposConGoles = data.filter(equipo => equipo.GF && equipo.GF !== "null" && equipo.GF > 0);
+    const equiposConGC = data.filter(equipo => equipo.GC && equipo.GC !== "null" && equipo.GC >= 0);
+
+    // Calcular top equipos goleadores
+    const equiposGF = [...equiposConGoles].sort((a, b) => b.GF - a.GF).slice(0, 10);
+    setTopEquiposGoleadores(equiposGF);
+
+    // Calcular equipos menos goleados
+    const equiposGC = [...equiposConGC].sort((a, b) => a.GC - b.GC).slice(0, 10);
+    setEquiposMenosGoleados(equiposGC);
+  };
 
   return (
+    <div className="flex flex-col min-h-screen text-gray-50">
+      <main className="flex-1 py-8 px-6 md:px-12 lg:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Goleadores */}
+          <div className="bg-gray-900 rounded-lg shadow-md p-6">
+            <h2 className="text-4xl font-bold mb-4">Goleadores</h2>
+            <div className="space-y-4">
+              {topGoleadores.map((jugador, index) => (
+                <div key={index} className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-gray-400 font-bold ${circleColors[index] || 'bg-gray-800'}`}>
+                      {index + 1}
+                    </div>
+                    <img src={getLogo(jugador.ID)} className="w-10 h-10"/>
+                    <div>
+                      <p className="font-medium">{jugador.Nombre} {jugador.Apellido}</p>
+                      <p className="text-gray-400">{jugador.Equipo}</p>
+                    </div>
+                  </div>
+                  <p className="font-bold text-gray-300">{jugador.Goles}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-    <div class="flex flex-col min-h-screen text-gray-50">
-      <main class="flex-1 py-8 px-6 md:px-12 lg:px-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-gray-900 rounded-lg shadow-md p-6">
-            <h2 class="text-4xl font-bold mb-4">Top Goleadores</h2>
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    1
+          {/* Top Equipos Goleadores */}
+          <div className="bg-gray-900 rounded-lg shadow-md p-6">
+            <h2 className="text-4xl font-bold mb-4">Equipos más goleadores</h2>
+            <div className="space-y-4">
+              {topEquiposGoleadores.map((equipo, index) => (
+                <div key={index} className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-gray-400 font-bold ${circleColors[index] || 'bg-gray-800'}`}>
+                      {index + 1}
+                    </div>
+                    <img src={getLogo(equipo.ID)} className="w-10 h-10"/>
+                    <p className="font-medium">{equipo.Equipo}</p>
                   </div>
-                  <div>
-                    <p class="font-medium">Lionel Messi</p>
-                    <p class="text-gray-400">Miami</p>
-                  </div>
+                  <p className="font-bold text-gray-300">{equipo.GF}</p>
                 </div>
-                <p class="font-bold text-gray-300">35 Goals</p>
-              </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    2
-                  </div>
-                  <div>
-                    <p class="font-medium">Cristiano Ronaldo</p>
-                    <p class="text-gray-400">ALNASSR</p>
-                  </div>
-                </div>
-                <p class="font-bold text-gray-300">28 Goals</p>
-              </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    3
-                  </div>
-                  <div>
-                    <p class="font-medium">Robert Lewandowski</p>
-                    <p class="text-gray-400">Barcelona</p>
-                  </div>
-                </div>
-                <p class="font-bold text-gray-300">25 Goals</p>
-              </div>
+              ))}
             </div>
           </div>
-          <div class="bg-gray-900 rounded-lg shadow-md p-6">
-            <h2 class="text-4xl font-bold mb-4">Top Equipos Goleadores</h2>
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    1
+
+          {/* Equipos Menos Goleados */}
+          <div className="bg-gray-900 rounded-lg shadow-md p-6">
+            <h2 className="text-4xl font-bold mb-4">Equipos menos goleados</h2>
+            <div className="space-y-4">
+              {equiposMenosGoleados.map((equipo, index) => (
+                <div key={index} className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-gray-400 font-bold ${circleColors[index] || 'bg-gray-800'}`}>
+                      {index + 1}
+                    </div>
+                    <img src={getLogo(equipo.ID)} className="w-10 h-10"/>
+                    <p className="font-medium">{equipo.Equipo}</p>
                   </div>
-                  <div class="w-10 h-10 flex items-center justify-center text-gray-400 font-bold gap-x-2">
-                    <img src={ADO_logo} alt="" />
-                  </div>
-                  <p class="font-medium">Manchester City</p>
+                  <p className="font-bold text-gray-300">{equipo.GC}</p>
                 </div>
-                <p class="font-bold text-gray-300">85 Goals</p>
-              </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    2
-                  </div>
-                  <div class="w-10 h-10 flex items-center justify-center text-gray-400 font-bold gap-x-2">
-                    <img src={EXP_logo} alt="" />
-                  </div>
-                  <p class="font-medium">Bayern Munich</p>
-                </div>
-                <p class="font-bold text-gray-300">78 Goals</p>
-              </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    3
-                  </div>
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    <img src={ANT_logo} alt="" />
-                  </div>
-                  <p class="font-medium">Liverpool</p>
-                </div>
-                <p class="font-bold text-gray-300">72 Goals</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-gray-900 rounded-lg shadow-md p-6">
-            <h2 class="text-4xl font-bold mb-4">Equipos menos goleados</h2>
-            <div class="space-y-4">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    3
-                  </div>
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    <img src={EXP_logo} alt="" />
-                  </div>
-                  <p class="font-medium">Manchester City</p>
-                </div>
-                <p class="font-bold text-gray-300">23 Goals</p>
-              </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    3
-                  </div>
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    <img src={ARQ_logo} alt="" />
-                  </div>
-                  <p class="font-medium">Atletico Madrid</p>
-                </div>
-                <p class="font-bold text-gray-300">25 Goals</p>
-              </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-4">
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    3
-                  </div>
-                  <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 font-bold">
-                    <img src={EVS_logo} alt="" />
-                  </div>
-                  <p class="font-medium">Juventus</p>
-                </div>
-                <p class="font-bold text-gray-300">27 Goals</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
