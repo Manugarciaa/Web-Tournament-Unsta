@@ -195,7 +195,7 @@ const Partidos = () => {
             const jornada1 = parsedData.slice(0, 12);
             const jornada2 = parsedData.slice(12, 24);
             const eliminatorias = parsedData.slice(24);
-            
+
             setData([...jornada1, ...jornada2, ...eliminatorias]);
             setIsLoading(false);
           },
@@ -211,10 +211,10 @@ const Partidos = () => {
         setIsLoading(false);
       }
     };
-  
+
     fetchData();
   }, []);
-  
+
 
   const groupedMatches = useMemo(() => [
     {
@@ -231,19 +231,43 @@ const Partidos = () => {
     }
   ], [data]);
 
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="flex flex-col items-center text-white">
       <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
         <span className="text-gradient">Partidos</span>
       </h1>
 
-      {groupedMatches.map((group, index) => (
-        <PartidoGroup
-          key={index}
-          title={group.title}
-          matches={group.matches}
-        />
-      ))}
+      {showContent ? (
+        groupedMatches.map((group, index) => (
+          <PartidoGroup
+            key={index}
+            title={group.title}
+            matches={group.matches}
+          />
+        ))
+      ) : (
+        <div style={{ height: '100vh' }} class="w-full gap-x-2 flex justify-center items-center">
+          <div
+            class="w-5 bg-white h-5 rounded-full animate-bounce"
+          ></div>
+          <div
+            class="w-5 h-5 bg-white rounded-full animate-bounce"
+          ></div>
+          <div
+            class="w-5 h-5 bg-white rounded-full animate-bounce"
+          ></div>
+        </div>
+      )}
     </div>
   );
 };

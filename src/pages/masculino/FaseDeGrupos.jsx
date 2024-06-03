@@ -50,7 +50,7 @@ const GroupTable = ({ groupName, teams }) => {
       } else if (b.goalDifference !== a.goalDifference) {
         return b.goalDifference - a.goalDifference;
       } else {
-        return b.goalsFor - a.goalsFor; 
+        return b.goalsFor - a.goalsFor;
       }
     });
   }, [teams]);
@@ -159,7 +159,7 @@ const FaseDeGrupos = () => {
   const groups = useMemo(() => {
     const grupoA = data.filter(item => item.Grupo === 'Grupo A');
     const grupoB = data.filter(item => item.Grupo === 'Grupo B');
-    
+
     return [
       {
         groupName: 'Grupo A',
@@ -194,15 +194,45 @@ const FaseDeGrupos = () => {
     ];
   }, [data]);
 
+  const [pending, setPending] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPending(false);
+    }, 1200);
+  }, []);
+
   return (
-    <div className="flex flex-col items-center text-white">
-      <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
-        <span className="text-gradient">Fase de grupos</span>
-      </h1>
-      {groups.map((group, index) => (
-        <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
-      ))}
-    </div>
+    <>
+      {pending ? (
+        <div className="flex flex-col items-center text-white">
+          <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
+            <span className="text-gradient">Fase de grupos</span>
+          </h1>
+          {/* <div className="w-16 h-16 animate-spin rounded-full border-t-2 border-b-2 border-white mb-5"></div> */}
+          <div style={{ height: '100vh' }} class="w-full gap-x-2 flex justify-center items-center">
+            <div
+              class="w-5 bg-white h-5 rounded-full animate-bounce"
+            ></div>
+            <div
+              class="w-5 h-5 bg-white rounded-full animate-bounce"
+            ></div>
+            <div
+              class="w-5 h-5 bg-white rounded-full animate-bounce"
+            ></div>
+          </div>
+        </div>
+      ) : (
+        <div className="flex flex-col items-center text-white">
+          <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
+            <span className="text-gradient">Fase de grupos</span>
+          </h1>
+          {groups.map((group, index) => (
+            <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 
