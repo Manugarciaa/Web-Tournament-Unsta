@@ -264,3 +264,13 @@ body {
     width: auto;
   }
 }
+
+.team-name {
+  font-size: 1.6rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.team-cell {
+  max-width: 200px;
+}

@@ -103,7 +103,7 @@ const GroupTable = ({ groupName, teams }) => {
                     {team.logo && (
                       <img src={team.logo} className="h-12 sm:h-12 mr-3 sm:mr-3" alt={`Logo ${team.name}`} />
                     )}
-                    <span className="text-3xl">{team.name}</span>
+                    <span className="team-name">{team.name}</span>
                   </div>
                 </td>
                 <td className="px-2 py-1 sm:px-3 sm:py-2 font-bold text-center text-xl">{team.points}</td>

@@ -69,6 +69,10 @@ const Etapa = styled.div`
   left: 50%;
   text-align: center;
   transform: translateX(-50%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
   ${props => {
     if (props.descripcion.includes('Jornada')) {
       return 'color: #008000; font-weight: bold;';
@@ -127,8 +131,22 @@ const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado }) => {
 };
 
 const PartidoGroup = ({ title, matches }) => (
-  <div className="flex flex-col items-center text-white">
-    <h2 className="text-4xl xl:text-5xl font-semibold text-white mt-12 mb-4">{title}</h2>
+  <div className="flex flex-col items-center text-white w-full">
+    <h2 
+      className="
+        text-white mt-12 mb-4 
+        whitespace-nowrap overflow-hidden text-ellipsis 
+        w-full text-center 
+        transition-all duration-300 ease-in-out
+        px-4
+      " 
+      style={{ 
+        fontSize: 'clamp(1rem, 6vw, 3rem)',
+        fontWeight: 600
+      }}
+    >
+      {title}
+    </h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {matches.map((match, index) => (
         <Partido

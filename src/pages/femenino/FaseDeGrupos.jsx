@@ -27,12 +27,12 @@ const GroupTable = ({ groupName, teams }) => {
     } else if (b.goalDifference !== a.goalDifference) {
       return b.goalDifference - a.goalDifference;
     } else {
-      return b.goalsFor - a.goalsFor; 
+      return b.goalsFor - a.goalsFor;
     }
   });
 
   return (
-    <div className="flex flex-col items-center mb-10 sm:mb-16" style={{ height: '77vh' }}>
+    <div className="flex flex-col items-center mb-10 sm:mb-16">
       <div className="w-full flex justify-center mb-5">
         <b className="text-white text-4xl sm:text-4xl">{groupName}</b>
       </div>
@@ -61,12 +61,16 @@ const GroupTable = ({ groupName, teams }) => {
                       <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
                   ) : index < 4 ? (
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-00 shadow-md">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-400 to-gray-00 shadow-md">
+                      <span className="text-white font-bold text-lg">{index + 1}</span>
+                    </div>
+                  ) : index < 6 ? (
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br shadow-md">
                       <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full">
-                      <span className="text-white flex items-center justify-center h-full text-black font-bold text-lg">{index + 1}</span>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-white to-gray-400 shadow-md">
+                      <span className="flex items-center justify-center h-full text-black font-bold text-lg">{index + 1}</span>
                     </div>
                   )}
                 </td>
@@ -75,7 +79,7 @@ const GroupTable = ({ groupName, teams }) => {
                     {team.logo && (
                       <img src={team.logo} className="h-12 sm:h-12 mr-3 sm:mr-3" alt={`Logo ${team.name}`} />
                     )}
-                    <span className="text-3xl">{team.name}</span>
+                    <span className="team-name">{team.name}</span>
                   </div>
                 </td>
                 <td className="px-2 py-1 sm:px-3 sm:py-2 font-bold text-center text-xl">{team.points}</td>
@@ -135,7 +139,7 @@ const FaseDeGrupos = () => {
   }, []);
 
   const grupoA = data.filter(item => item.Grupo === 'Tabla');
-  
+
   const groups = [
     {
       groupName: 'Tabla',
@@ -153,7 +157,7 @@ const FaseDeGrupos = () => {
       })),
     },
   ];
-  
+
   return (
     <div className="flex flex-col items-center text-white">
       <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
