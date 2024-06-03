@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { lazy, Suspense, useEffect } from 'react';
-
+import { Analytics } from '@vercel/analytics/react';
 import styles from "./style";
 
 import Header from "./components/Header";
@@ -98,6 +98,7 @@ const App = () => {
               </Routes>
             </Suspense>
           </BrowserRouter>
+          <Analytics />
         </div>
       </div>
     </div>
