@@ -63,6 +63,7 @@ const MAL = () => {
     <div className="min-h-screen flex flex-col">
       <header className="text-white py-4 px-6 mb-8">
         <h1 className="text-5xl font-bold text-center">La Mala F. C.</h1>
+        <h2 className="text-amber-400 text-small text-center mt-2">Campeón Copa UNSTA 2022</h2>
       </header>
       <div className="flex justify-center items-center w-full h-50">
         <img

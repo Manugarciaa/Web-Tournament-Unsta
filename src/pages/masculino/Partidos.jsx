@@ -120,7 +120,7 @@ const getLogoForTeam = (teamName) => {
   return logos[teamName] || TBD_logo;
 };
 
-const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado, estado }) => {
+const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado }) => {
   const logo1 = useMemo(() => getLogoForTeam(equipo1), [equipo1]);
   const logo2 = useMemo(() => getLogoForTeam(equipo2), [equipo2]);
 
@@ -166,7 +166,6 @@ const PartidoGroup = ({ title, matches }) => (
           fecha={match.Fecha}
           hora={match.Hora}
           resultado={match.Resultado}
-          estado={match.Estado}
         />
       ))}
     </div>

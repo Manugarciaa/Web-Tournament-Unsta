@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import Papa from 'papaparse';
 import styled from 'styled-components';
-import BIM_logo from '../../assets/images/BIM_logo.webp';
-import NOT_logo from '../../assets/images/NOT_logo.webp';
-import MAL_logo from '../../assets/images/MAL_logo.webp';
-import MUC_logo from '../../assets/images/MUC_logo.webp';
-import DES_logo from '../../assets/images/DES_logo.webp';
+import BIM_logo from '../../assets/images/BIM_icon.webp';
+import NOT_logo from '../../assets/images/NOT_icon.webp';
+import MAL_logo from '../../assets/images/MAL_icon.webp';
+import MUC_logo from '../../assets/images/MUC_icon.webp';
+import DES_logo from '../../assets/images/DES_icon.webp';
 import TBD_logo from '../../assets/images/TBD_icon.webp';
 
 const PartidoCard = styled.div`
@@ -83,22 +83,22 @@ const Etapa = styled.div`
 `;
 
 const getLogoForTeam = (teamName) => {
-  switch (teamName) {
-    case 'BIM': return BIM_logo;
-    case 'NOT': return NOT_logo;
-    case 'MAL': return MAL_logo;
-    case 'MUC': return MUC_logo;
-    case 'DES': return DES_logo;
-    default: return TBD_logo;
-  }
+  const logos = {
+    BIM: BIM_logo,
+    NOT: NOT_logo,
+    MAL: MAL_logo,
+    MUC: MUC_logo,
+    DES: DES_logo,
+  };
+  return logos[teamName] || TBD_logo;
 };
 
-const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado, estado }) => {
+const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado }) => {
   const logo1 = useMemo(() => getLogoForTeam(equipo1), [equipo1]);
   const logo2 = useMemo(() => getLogoForTeam(equipo2), [equipo2]);
 
   const displayResultOrDateTime = useMemo(() => {
-    if (resultado !== null && resultado !== undefined && resultado !== '') {
+    if (resultado) {
       return resultado;
     } else {
       const dateTime = fecha && hora ? `${fecha}\n${hora}` : (fecha || hora || 'Fecha y hora por definir');
@@ -139,7 +139,6 @@ const PartidoGroup = ({ title, matches }) => (
           fecha={match.Fecha}
           hora={match.Hora}
           resultado={match.Resultado}
-          estado={match.Estado}
         />
       ))}
     </div>
@@ -164,7 +163,12 @@ const Partidos = () => {
           dynamicTyping: true,
           skipEmptyLines: true,
           complete: (results) => {
-            setData(results.data);
+            const parsedData = results.data;
+            const jornada1 = parsedData.slice(0, 5);
+            const jornada2 = parsedData.slice(5, 10);
+            const eliminatorias = parsedData.slice(10);
+
+            setData([...jornada1, ...jornada2, ...eliminatorias]);
             setIsLoading(false);
           },
           error: (error) => {
