@@ -264,22 +264,3 @@ body {
     width: auto;
   }
 }
-
-.animated-gradient-background {
-  background: linear-gradient(45deg, #1a1e21, #23282D, #1f2428, #393f44, #1f2428, #1a1e21);
-  background-size: 300% 100%;
-  animation: gradient 40s ease-in-out infinite;
-  -webkit-animation: gradient 40s ease-in-out infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
