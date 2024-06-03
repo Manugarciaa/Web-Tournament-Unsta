@@ -130,7 +130,7 @@ const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado }) => {
 
   const displayResultOrDateTime = useMemo(() => {
     if (resultado) {
-      return resultado;
+      return <strong>{resultado}</strong>;
     } else {
       const dateTime = fecha && hora ? `${fecha}\n${hora}` : (fecha || hora || 'Fecha y hora por definir');
       return dateTime.split('\n').map((line, i) => (

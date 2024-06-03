@@ -1,6 +1,6 @@
 Grupo,Logo,ID,Equipo,Pts,PJ,PG,PE,PP,GF,GC,Dif
-Tabla,BIM_logo,BIM,Bimbineta F. C.,0,0,0,0,0,0,0,0
-Tabla,NOT_logo,NOT,Nottingham Miedo,0,0,0,0,0,0,0,0
-Tabla,MAL_logo,MAL,La Mala F. C.,0,0,0,0,0,0,0,0
-Tabla,MUC_logo,MUC,Muchachas,0,0,0,0,0,0,0,0
-Tabla,DES_logo,DES,Descaro F. C.,0,0,0,0,0,0,0,0
+Tabla,BIM_logo,BIM,Bimbineta F. C.,6,2,2,0,0,9,2,7
+Tabla,NOT_logo,NOT,Nottingham Miedo,3,2,1,0,1,12,6,6
+Tabla,MAL_logo,MAL,La Mala F. C.,3,2,1,0,1,5,6,-1
+Tabla,MUC_logo,MUC,Muchachas,0,2,0,0,2,5,14,-9
+Tabla,DES_logo,DES,Descaro F. C.,3,2,1,0,1,5,8,-3

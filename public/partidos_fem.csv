@@ -1,9 +1,9 @@
 Partido,Descripcion,Equipo1,Equipo2,Fecha,Hora,Resultado
-1,Fase de grupos - Jornada 1,MUC,NOT,Lun. 3/6,12:00,
-2,Fase de grupos - Jornada 1,DES,MAL,Lun. 3/6,13:00,
-3,Fase de grupos - Jornada 1,MUC,MAL,Lun. 3/6,14:00,
-4,Fase de grupos - Jornada 1,BIM,NOT,Lun. 3/6,15:00,
-5,Fase de grupos - Jornada 1,BIM,DES,Lun. 3/6,16:00,
+1,Fase de grupos - Jornada 1,MUC,NOT,Lun. 3/6,12:00,3 : 11
+2,Fase de grupos - Jornada 1,DES,MAL,Lun. 3/6,13:00,4 : 2
+3,Fase de grupos - Jornada 1,MUC,MAL,Lun. 3/6,14:00,2 : 3
+4,Fase de grupos - Jornada 1,BIM,NOT,Lun. 3/6,15:00,3 : 1
+5,Fase de grupos - Jornada 1,BIM,DES,Lun. 3/6,16:00,6 : 1
 6,Fase de grupos - Jornada 2,DES,MUC,Mié. 5/6,12:00,
 7,Fase de grupos - Jornada 2,NOT,DES,Mié. 5/6,13:00,
 8,Fase de grupos - Jornada 2,BIM,MAL,Mié. 5/6,14:00,
