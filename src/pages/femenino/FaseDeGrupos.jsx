@@ -85,7 +85,9 @@ const GroupTable = ({ groupName, teams }) => {
                 <td className="hidden sm:table-cell px-2 py-1 sm:px-3 sm:py-2 text-center text-xl">{team.lost}</td>
                 <td className="hidden sm:table-cell px-2 py-1 sm:px-3 sm:py-2 text-center text-xl">{team.goalsFor}</td>
                 <td className="hidden sm:table-cell px-2 py-1 sm:px-3 sm:py-2 text-center text-xl">{team.goalsAgainst}</td>
-                <td className="sm:table-cell px-2 py-1 sm:px-3 sm:py-2 text-center text-xl">{team.goalDifference}</td>
+                <td className="sm:table-cell px-2 py-1 sm:px-3 sm:py-2 text-center text-xl">
+                  {team.goalDifference >= 1 ? `+${team.goalDifference}` : team.goalDifference}
+                </td>
               </tr>
             ))}
           </tbody>

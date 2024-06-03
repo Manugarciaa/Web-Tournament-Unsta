@@ -4,7 +4,7 @@ import { FaHome , FaInstagram } from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
   color: #fff;
-  padding: 3rem;
+  padding: 6rem;
   text-align: center;
   margin-top: auto;
 `;
@@ -36,7 +36,7 @@ const ContactInfo = styled.div`
 
 const ContactInfoText = styled.p`
   font-size: 1rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
 `;
 
 const Footer = () => {

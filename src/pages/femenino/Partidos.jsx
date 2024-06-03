@@ -112,14 +112,14 @@ const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado }) => {
     <PartidoCard>
       <Etapa descripcion={descripcion || 'TBD'}>{descripcion || 'TBD'}</Etapa>
       <div className="equipo">
-        <img src={logo1} alt={equipo1 || '???'} />
+        <img src={logo1} alt={equipo1 || '???'} width="100" height="100" />
         <span><strong style={{ fontSize: '2rem' }}>{equipo1 || '???'}</strong></span>
       </div>
       <div className="resultado">
         {displayResultOrDateTime}
       </div>
       <div className="equipo">
-        <img src={logo2} alt={equipo2 || '???'} />
+        <img src={logo2} alt={equipo2 || '???'} width="100" height="100" />
         <span><strong style={{ fontSize: '2rem' }}>{equipo2 || '???'}</strong></span>
       </div>
     </PartidoCard>

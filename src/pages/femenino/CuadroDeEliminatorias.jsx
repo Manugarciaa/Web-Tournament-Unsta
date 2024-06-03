@@ -257,7 +257,7 @@ const CuadroDeEliminatorias = () => {
               <CopaContainerORO>
                 <Fase>
                   <div className="header" style={{ textAlign: 'center' }}>
-                    <img src={copa_oro} alt="Copa de oro" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
+                    <img src={copa_oro} alt="Copa de oro" width="50" height="50" style={{ display: 'block', margin: 'auto' }} />
                     <h2 style={{ fontSize: '20px' }}><strong>COPA DE ORO</strong></h2>
                   </div>
                   <div class="w-full gap-x-2 flex justify-center items-center">
@@ -278,7 +278,7 @@ const CuadroDeEliminatorias = () => {
               <CopaContainerBRONCE>
                 <Fase>
                   <div className="header" style={{ textAlign: 'center' }}>
-                    <img src={medalla_bronce} alt="Medalla de bronce" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
+                    <img src={medalla_bronce} alt="Medalla de bronce" width="50" height="50" style={{ display: 'block', margin: 'auto' }} />
                     <h2 style={{ fontSize: '20px' }}><strong>MEDALLA DE BRONCE</strong></h2>
                   </div>
                   <div class="w-full gap-x-2 flex justify-center items-center">
@@ -307,18 +307,18 @@ const CuadroDeEliminatorias = () => {
               <CopaContainerORO>
                 <Fase>
                   <div className="header" style={{ textAlign: 'center' }}>
-                    <img src={copa_oro} alt="Copa de oro" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
+                    <img src={copa_oro} alt="Copa de oro" width="50" height="50" style={{ display: 'block', margin: 'auto' }} />
                     <h2 style={{ fontSize: '20px' }}><strong>COPA DE ORO</strong></h2>
                   </div>
                   <Partido>
                     <Etapa>Final</Etapa>
                     <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido12_Equipo1)} alt="Equipo 3" />
+                      <img src={getLogoForTeam(data.Partido12_Equipo1)} alt="Equipo 1" width="50" height="50" />
                       <span><strong>{data.Partido12_Equipo1 || '???'}</strong></span>
                     </div>
                     <div className="resultado" style={{ fontWeight: 'normal' }}>{displayResultOrDateTime(data.Partido12_Resultado, data.Partido12_Fecha, data.Partido12_Hora)}</div>
                     <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido12_Equipo2)} alt="Equipo 4" />
+                      <img src={getLogoForTeam(data.Partido12_Equipo2)} alt="Equipo 2" width="50" height="50" />
                       <span><strong>{data.Partido12_Equipo2 || '???'}</strong></span>
                     </div>
                   </Partido>
@@ -329,18 +329,18 @@ const CuadroDeEliminatorias = () => {
               <CopaContainerBRONCE>
                 <Fase>
                   <div className="header" style={{ textAlign: 'center' }}>
-                    <img src={medalla_bronce} alt="Medalla de bronce" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
+                    <img src={medalla_bronce} alt="Medalla de bronce" width="50" height="50" style={{ display: 'block', margin: 'auto' }} />
                     <h2 style={{ fontSize: '20px' }}><strong>MEDALLA DE BRONCE</strong></h2>
                   </div>
                   <Partido>
                     <Etapa>Final</Etapa>
                     <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido11_Equipo1)} alt="Equipo 3" />
+                      <img src={getLogoForTeam(data.Partido11_Equipo1)} alt="Equipo 3" width="50" height="50" />
                       <span><strong>{data.Partido11_Equipo1 || '???'}</strong></span>
                     </div>
                     <div className="resultado" style={{ fontWeight: 'normal' }}>{displayResultOrDateTime(data.Partido11_Resultado, data.Partido11_Fecha, data.Partido11_Hora)}</div>
                     <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido11_Equipo2)} alt="Equipo 4" />
+                      <img src={getLogoForTeam(data.Partido11_Equipo2)} alt="Equipo 4" width="50" height="50" />
                       <span><strong>{data.Partido11_Equipo2 || '???'}</strong></span>
                     </div>
                   </Partido>
