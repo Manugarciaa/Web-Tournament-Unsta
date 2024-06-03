@@ -4,7 +4,7 @@ import { FaHome , FaInstagram } from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
   color: #fff;
-  padding: 1rem;
+  padding: 3rem;
   text-align: center;
   margin-top: auto;
 `;

@@ -31,9 +31,8 @@ const Home = () => (
         <img
           src={logo_torneo}
           alt="Home image"
-          className="w-[70%] h-[90%] relative z-[5]"
+          className="w-[80%] h-[80%] relative z-[5]"
         />
-        <div className="absolute z-[1] w-[60%] h-[70%] rounded-full orange__gradient bottom-40" />
       </div>
     </section>
   </>

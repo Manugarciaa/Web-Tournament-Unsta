@@ -246,7 +246,6 @@ const Partidos = () => {
       <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
         <span className="text-gradient">Partidos</span>
       </h1>
-
       {showContent ? (
         groupedMatches.map((group, index) => (
           <PartidoGroup
@@ -256,16 +255,19 @@ const Partidos = () => {
           />
         ))
       ) : (
-        <div style={{ height: '100vh' }} class="w-full gap-x-2 flex justify-center items-center">
-          <div
-            class="w-5 bg-white h-5 rounded-full animate-bounce"
-          ></div>
-          <div
-            class="w-5 h-5 bg-white rounded-full animate-bounce"
-          ></div>
-          <div
-            class="w-5 h-5 bg-white rounded-full animate-bounce"
-          ></div>
+        <div style={{
+          height: '100vh',
+          width: '100vw',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          backgroundColor: '#23282D'
+        }} className="flex justify-center items-center">
+          <div className="flex gap-x-2">
+            <div className="w-5 bg-white h-5 rounded-full animate-bounce"></div>
+            <div className="w-5 h-5 bg-white rounded-full animate-bounce"></div>
+            <div className="w-5 h-5 bg-white rounded-full animate-bounce"></div>
+          </div>
         </div>
       )}
     </div>

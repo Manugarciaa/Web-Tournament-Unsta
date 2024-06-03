@@ -254,6 +254,7 @@ const CuadroDeEliminatorias = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [pendingFem, setPendingFem] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -333,7 +334,7 @@ const CuadroDeEliminatorias = () => {
           <Title>
             <span className="text-gradient">Cuadro de eliminatorias</span>
           </Title>
-          <CuadroContainer style={{ height: '91vh' }} className='text-black'>
+          <CuadroContainer style={{ height: '80vh' }} className='text-black'>
             <div className="copa-wrapper">
               <CopaContainerORO>
                 <Fase>

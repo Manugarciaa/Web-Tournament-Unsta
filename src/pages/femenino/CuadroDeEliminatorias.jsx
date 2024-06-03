@@ -54,6 +54,7 @@ const CopaContainerORO = styled.div`
   background: linear-gradient(40deg, #F7DC6F, #977E1D, #F1C40F);
   background-size: 400% 400%;
   animation: verticalGradientAnimation 5s ease infinite;
+  max-height: 300px; // Ajusta este valor según tus necesidades
 
   @media (max-width: 767px) {
     border-radius: 8px;
@@ -83,6 +84,7 @@ const CopaContainerBRONCE = styled.div`
   background: linear-gradient(40deg, #E67E22, #784212, #CA6F1E);
   background-size: 400% 400%;
   animation: gradientAnimation 5s ease infinite;
+  max-height: 300px; // Ajusta este valor según tus necesidades
 
   @media (max-width: 767px) {
     border-radius: 8;
@@ -172,6 +174,7 @@ const CuadroDeEliminatorias = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [pendingFem, setPendingFem] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -221,6 +224,12 @@ const CuadroDeEliminatorias = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setPendingFem(false);
+    }, 1100);
+  }, []);
+
   if (error) {
     return <div>{error}</div>;
   }
@@ -238,57 +247,109 @@ const CuadroDeEliminatorias = () => {
 
   return (
     <>
-    <div className="" style={{ height: '91vh' }}>
-      <Title>
-        <span className="text-gradient">Cuadro de eliminatorias</span>
-      </Title>
-      <CuadroContainer className='text-black'>
-        <div className="copa-wrapper">
-          <CopaContainerORO>
-            <Fase>
-              <div className="header" style={{ textAlign: 'center' }}>
-                <img src={copa_oro} alt="Copa de oro" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
-                <h2 style={{ fontSize: '20px' }}><strong>COPA DE ORO</strong></h2>
-              </div>
-              <Partido>
-                <Etapa>Final</Etapa>
-                <div className="equipo">
-                  <img src={getLogoForTeam(data.Partido12_Equipo1)} alt="Equipo 3" />
-                  <span><strong>{data.Partido12_Equipo1 || '???'}</strong></span>
-                </div>
-                <div className="resultado" style={{ fontWeight: 'normal' }}>{displayResultOrDateTime(data.Partido12_Resultado, data.Partido12_Fecha, data.Partido12_Hora)}</div>
-                <div className="equipo">
-                  <img src={getLogoForTeam(data.Partido12_Equipo2)} alt="Equipo 4" />
-                  <span><strong>{data.Partido12_Equipo2 || '???'}</strong></span>
-                </div>
-              </Partido>              
-            </Fase>
-          </CopaContainerORO>
+      {pendingFem ? (
+        <>
+          <Title>
+            <span className="text-gradient">Cuadro de eliminatorias</span>
+          </Title>
+          <CuadroContainer style={{ height: '80vh' }} className='text-black'>
+            <div className="copa-wrapper">
+              <CopaContainerORO>
+                <Fase>
+                  <div className="header" style={{ textAlign: 'center' }}>
+                    <img src={copa_oro} alt="Copa de oro" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
+                    <h2 style={{ fontSize: '20px' }}><strong>COPA DE ORO</strong></h2>
+                  </div>
+                  <div class="w-full gap-x-2 flex justify-center items-center">
+                    <div
+                      class="w-5 bg-gray-800 h-5 rounded-full animate-bounce"
+                    ></div>
+                    <div
+                      class="w-5 h-5 bg-gray-800 rounded-full animate-bounce"
+                    ></div>
+                    <div
+                      class="w-5 h-5 bg-gray-800 rounded-full animate-bounce"
+                    ></div>
+                  </div>
+                </Fase>
+              </CopaContainerORO>
+            </div>
+            <div className="copa-wrapper">
+              <CopaContainerBRONCE>
+                <Fase>
+                  <div className="header" style={{ textAlign: 'center' }}>
+                    <img src={medalla_bronce} alt="Medalla de bronce" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
+                    <h2 style={{ fontSize: '20px' }}><strong>MEDALLA DE BRONCE</strong></h2>
+                  </div>
+                  <div class="w-full gap-x-2 flex justify-center items-center">
+                    <div
+                      class="w-5 bg-gray-800 h-5 rounded-full animate-bounce"
+                    ></div>
+                    <div
+                      class="w-5 h-5 bg-gray-800 rounded-full animate-bounce"
+                    ></div>
+                    <div
+                      class="w-5 h-5 bg-gray-800 rounded-full animate-bounce"
+                    ></div>
+                  </div>
+                </Fase>
+              </CopaContainerBRONCE>
+            </div>
+          </CuadroContainer>
+        </>
+      ) : (
+        <div className="" style={{ height: '91vh' }}>
+          <Title>
+            <span className="text-gradient">Cuadro de eliminatorias</span>
+          </Title>
+          <CuadroContainer className='text-black'>
+            <div className="copa-wrapper">
+              <CopaContainerORO>
+                <Fase>
+                  <div className="header" style={{ textAlign: 'center' }}>
+                    <img src={copa_oro} alt="Copa de oro" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
+                    <h2 style={{ fontSize: '20px' }}><strong>COPA DE ORO</strong></h2>
+                  </div>
+                  <Partido>
+                    <Etapa>Final</Etapa>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido12_Equipo1)} alt="Equipo 3" />
+                      <span><strong>{data.Partido12_Equipo1 || '???'}</strong></span>
+                    </div>
+                    <div className="resultado" style={{ fontWeight: 'normal' }}>{displayResultOrDateTime(data.Partido12_Resultado, data.Partido12_Fecha, data.Partido12_Hora)}</div>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido12_Equipo2)} alt="Equipo 4" />
+                      <span><strong>{data.Partido12_Equipo2 || '???'}</strong></span>
+                    </div>
+                  </Partido>
+                </Fase>
+              </CopaContainerORO>
+            </div>
+            <div className="copa-wrapper">
+              <CopaContainerBRONCE>
+                <Fase>
+                  <div className="header" style={{ textAlign: 'center' }}>
+                    <img src={medalla_bronce} alt="Medalla de bronce" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
+                    <h2 style={{ fontSize: '20px' }}><strong>MEDALLA DE BRONCE</strong></h2>
+                  </div>
+                  <Partido>
+                    <Etapa>Final</Etapa>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido11_Equipo1)} alt="Equipo 3" />
+                      <span><strong>{data.Partido11_Equipo1 || '???'}</strong></span>
+                    </div>
+                    <div className="resultado" style={{ fontWeight: 'normal' }}>{displayResultOrDateTime(data.Partido11_Resultado, data.Partido11_Fecha, data.Partido11_Hora)}</div>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido11_Equipo2)} alt="Equipo 4" />
+                      <span><strong>{data.Partido11_Equipo2 || '???'}</strong></span>
+                    </div>
+                  </Partido>
+                </Fase>
+              </CopaContainerBRONCE>
+            </div>
+          </CuadroContainer>
         </div>
-        <div className="copa-wrapper">
-          <CopaContainerBRONCE>
-            <Fase>
-              <div className="header" style={{ textAlign: 'center' }}>
-                <img src={medalla_bronce} alt="Medalla de bronce" style={{ width: '50px', height: 'auto', display: 'block', margin: 'auto' }} />
-                <h2 style={{ fontSize: '20px' }}><strong>MEDALLA DE BRONCE</strong></h2>
-              </div>
-              <Partido>
-                <Etapa>Final</Etapa>
-                <div className="equipo">
-                  <img src={getLogoForTeam(data.Partido11_Equipo1)} alt="Equipo 3" />
-                  <span><strong>{data.Partido11_Equipo1 || '???'}</strong></span>
-                </div>
-                <div className="resultado" style={{ fontWeight: 'normal' }}>{displayResultOrDateTime(data.Partido11_Resultado, data.Partido11_Fecha, data.Partido11_Hora)}</div>
-                <div className="equipo">
-                  <img src={getLogoForTeam(data.Partido11_Equipo2)} alt="Equipo 4" />
-                  <span><strong>{data.Partido11_Equipo2 || '???'}</strong></span>
-                </div>
-              </Partido>              
-            </Fase>
-          </CopaContainerBRONCE>
-        </div>
-      </CuadroContainer>
-      </div>
+      )}
     </>
   );
 };

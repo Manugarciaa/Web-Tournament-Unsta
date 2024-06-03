@@ -126,6 +126,7 @@ const GroupTable = ({ groupName, teams }) => {
 const FaseDeGrupos = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -141,15 +142,18 @@ const FaseDeGrupos = () => {
           skipEmptyLines: true,
           complete: (results) => {
             setData(results.data);
+            setIsLoading(false);
           },
           error: (error) => {
             console.error('Error al parsear el CSV:', error);
             setError('Error al parsear el archivo CSV');
+            setIsLoading(false);
           }
         });
       } catch (error) {
         console.error('Error al cargar el archivo CSV:', error);
         setError('Error al cargar el archivo CSV');
+        setIsLoading(false);
       }
     };
 
@@ -194,45 +198,42 @@ const FaseDeGrupos = () => {
     ];
   }, [data]);
 
-  const [pending, setPending] = useState(true);
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setPending(false);
-    }, 1200);
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <>
-      {pending ? (
-        <div className="flex flex-col items-center text-white">
-          <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
-            <span className="text-gradient">Fase de grupos</span>
-          </h1>
-          {/* <div className="w-16 h-16 animate-spin rounded-full border-t-2 border-b-2 border-white mb-5"></div> */}
-          <div style={{ height: '100vh' }} class="w-full gap-x-2 flex justify-center items-center">
-            <div
-              class="w-5 bg-white h-5 rounded-full animate-bounce"
-            ></div>
-            <div
-              class="w-5 h-5 bg-white rounded-full animate-bounce"
-            ></div>
-            <div
-              class="w-5 h-5 bg-white rounded-full animate-bounce"
-            ></div>
+    <div className="flex flex-col items-center text-white">
+      <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
+        <span className="text-gradient">Fase de grupos</span>
+      </h1>
+      {showContent ? (
+        groups.map((group, index) => (
+          <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
+        ))
+      ) : (
+        <div style={{
+          height: '100vh',
+          width: '100vw',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          backgroundColor: '#23282D'
+        }} className="flex justify-center items-center">
+          <div className="flex gap-x-2">
+            <div className="w-5 bg-white h-5 rounded-full animate-bounce"></div>
+            <div className="w-5 h-5 bg-white rounded-full animate-bounce"></div>
+            <div className="w-5 h-5 bg-white rounded-full animate-bounce"></div>
           </div>
         </div>
-      ) : (
-        <div className="flex flex-col items-center text-white">
-          <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
-            <span className="text-gradient">Fase de grupos</span>
-          </h1>
-          {groups.map((group, index) => (
-            <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
-          ))}
-        </div>
       )}
-    </>
+    </div>
   );
 };
 

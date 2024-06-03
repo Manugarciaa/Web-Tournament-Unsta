@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Papa from 'papaparse';
 import styled from 'styled-components';
 import BIM_logo from '../../assets/images/BIM_logo.webp';
@@ -94,10 +94,10 @@ const getLogoForTeam = (teamName) => {
 };
 
 const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado, estado }) => {
-  const logo1 = getLogoForTeam(equipo1);
-  const logo2 = getLogoForTeam(equipo2);
+  const logo1 = useMemo(() => getLogoForTeam(equipo1), [equipo1]);
+  const logo2 = useMemo(() => getLogoForTeam(equipo2), [equipo2]);
 
-  const displayResultOrDateTime = () => {
+  const displayResultOrDateTime = useMemo(() => {
     if (resultado !== null && resultado !== undefined && resultado !== '') {
       return resultado;
     } else {
@@ -106,7 +106,7 @@ const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado, estado
         <span key={i} className="date-time">{line}<br /></span>
       ));
     }
-  };
+  }, [fecha, hora, resultado]);
 
   return (
     <PartidoCard>
@@ -116,7 +116,7 @@ const Partido = ({ descripcion, equipo1, equipo2, fecha, hora, resultado, estado
         <span><strong style={{ fontSize: '2rem' }}>{equipo1 || '???'}</strong></span>
       </div>
       <div className="resultado">
-        {displayResultOrDateTime()}
+        {displayResultOrDateTime}
       </div>
       <div className="equipo">
         <img src={logo2} alt={equipo2 || '???'} />
@@ -183,10 +183,7 @@ const Partidos = () => {
     fetchData();
   }, []);
 
-  if (isLoading) return null;
-  if (error) return <p>Error: {error}</p>;
-
-  const groupedMatches = [
+  const groupedMatches = useMemo(() => [
     {
       title: "Jornada 1 - Fase de grupos",
       matches: data.slice(0, 5)
@@ -199,21 +196,47 @@ const Partidos = () => {
       title: "Jornada 3 - Eliminatorias",
       matches: data.slice(10)
     }
-  ];
+  ], [data]);
+
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="flex flex-col items-center text-white">
       <h1 className="flex-1 font-poppins font-semibold text-[32px] text-white leading-[35px] xl:text-[50px] xl:leading-[75px] mb-5">
         <span className="text-gradient">Partidos</span>
       </h1>
-
-      {groupedMatches.map((group, index) => (
-        <PartidoGroup
-          key={index}
-          title={group.title}
-          matches={group.matches}
-        />
-      ))}
+      {showContent ? (
+        groupedMatches.map((group, index) => (
+          <PartidoGroup
+            key={index}
+            title={group.title}
+            matches={group.matches}
+          />
+        ))
+      ) : (
+        <div style={{
+          height: '100vh',
+          width: '100vw',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          backgroundColor: '#23282D'
+        }} className="flex justify-center items-center">
+          <div className="flex gap-x-2">
+            <div className="w-5 bg-white h-5 rounded-full animate-bounce"></div>
+            <div className="w-5 h-5 bg-white rounded-full animate-bounce"></div>
+            <div className="w-5 h-5 bg-white rounded-full animate-bounce"></div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
