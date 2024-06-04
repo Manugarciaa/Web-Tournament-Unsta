@@ -1,17 +1,17 @@
 Grupo,Logo,ID,Equipo,Pts,PJ,PG,PE,PP,GF,GC,Dif
+Grupo A,DX1_logo,DX1,Dominio X+1,6,2,2,0,0,20,7,13
 Grupo A,SCH_logo,SCH,Schalke 23,3,2,1,0,1,8,12,-4
 Grupo A,PAB_logo,PAB,Pabellón A,3,2,1,0,1,7,6,1
-Grupo A,DX1_logo,DX1,Dominio X+1,6,2,2,0,0,20,7,13
 Grupo A,QUE_logo,QUE,El Queme,0,2,0,0,2,5,15,-10
-Grupo A,SSO_logo,SSO,San Sócalo,6,2,2,0,0,11,3,8
-Grupo A,ANT_logo,ANT,Anti Canva F. C.,3,2,1,0,1,3,8,-5
-Grupo A,EXP_logo,EXP,Expensive Bottles,0,2,0,0,2,4,10,-6
-Grupo A,TAR_logo,TAR,Tartagal F. C.,3,2,1,0,1,7,4,3
-Grupo B,GHO_logo,GHO,Ghostbusters,0,1,0,0,1,0,13,-13
-Grupo B,BAS_logo,BAS,Bastardos de Richard,3,1,1,0,0,13,0,13
-Grupo B,ARQ_logo,ARQ,Arquero Fantasma,0,1,0,0,1,1,2,-1
-Grupo B,HDV_logo,HDV,Herederos de Vega,3,1,1,0,0,2,1,1
-Grupo B,RAM_logo,RAM,Rama y sus Ramitas,0,1,0,0,1,1,7,-6
-Grupo B,EVS_logo,EVS,Evolutions F. C.,3,1,1,0,0,7,1,6
-Grupo B,ADO_logo,ADO,Adobe F. C.,3,1,1,0,0,2,1,1
-Grupo B,PMA_logo,PMA,Poca Magia F. C.,0,1,0,0,1,1,2,-1
+Grupo B,SSO_logo,SSO,San Sócalo,6,2,2,0,0,11,3,8
+Grupo B,ANT_logo,ANT,Anti Canva F. C.,3,2,1,0,1,3,8,-5
+Grupo B,TAR_logo,TAR,Tartagal F. C.,3,2,1,0,1,7,4,3
+Grupo B,EXP_logo,EXP,Expensive Bottles,0,2,0,0,2,4,10,-6
+Grupo C,BAS_logo,BAS,Bastardos de Richard,3,1,1,0,0,13,0,13
+Grupo C,HDV_logo,HDV,Herederos de Vega,3,1,1,0,0,2,1,1
+Grupo C,ARQ_logo,ARQ,Arquero Fantasma,0,1,0,0,1,1,2,-1
+Grupo C,GHO_logo,GHO,Ghostbusters,0,1,0,0,1,0,13,-13
+Grupo D,EVS_logo,EVS,Evolutions F. C.,3,1,1,0,0,7,1,6
+Grupo D,ADO_logo,ADO,Adobe F. C.,3,1,1,0,0,2,1,1
+Grupo D,PMA_logo,PMA,Poca Magia F. C.,0,1,0,0,1,1,2,-1
+Grupo D,RAM_logo,RAM,Rama y sus Ramitas,0,1,0,0,1,1,7,-6

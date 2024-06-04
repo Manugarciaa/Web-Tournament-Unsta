@@ -86,8 +86,16 @@ const Etapa = styled.div`
   max-width: 90%;
   ${props => {
     if (props.descripcion.includes('Grupo A')) {
-      return 'color: #008000; font-weight: bold;';
+      return 'color: #16a34a; font-weight: bold;';
+    } else if (props.descripcion.includes('Grupo B')) {
+      return 'color: #ef4444; font-weight: bold;';
+    } else if (props.descripcion.includes('Grupo C')) {
+      return 'color: #3b82f6; font-weight: bold;';
+    } else if (props.descripcion.includes('Grupo D')) {
+      return 'color: #d97706; font-weight: bold;';
     } else if (props.descripcion.includes('oro')) {
+      return 'color: #D4AC0D; font-weight: bold;';
+    }else if (props.descripcion.includes('oro')) {
       return 'color: #D4AC0D; font-weight: bold;';
     } else if (props.descripcion.includes('plata')) {
       return 'color: #515A5A; font-weight: bold;';

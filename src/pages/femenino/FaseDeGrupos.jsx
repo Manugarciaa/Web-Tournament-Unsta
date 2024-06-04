@@ -21,16 +21,6 @@ const getLogo = (id) => {
 };
 
 const GroupTable = ({ groupName, teams }) => {
-  const sortedTeams = teams.sort((a, b) => {
-    if (b.points !== a.points) {
-      return b.points - a.points;
-    } else if (b.goalDifference !== a.goalDifference) {
-      return b.goalDifference - a.goalDifference;
-    } else {
-      return b.goalsFor - a.goalsFor;
-    }
-  });
-
   return (
     <div className="flex flex-col items-center mb-10 sm:mb-16">
       <div className="w-full flex justify-center mb-5">
@@ -53,7 +43,7 @@ const GroupTable = ({ groupName, teams }) => {
             </tr>
           </thead>
           <tbody>
-            {sortedTeams.map((team, index) => (
+            {teams.map((team, index) => (
               <tr className="text-white border-b-2 border-gray-300" style={{ borderBottomColor: 'rgba(255, 255, 255, 0.1)' }} key={index}>
                 <td className="px-2 py-2 sm:px-4 sm:py-4 flex justify-center items-center">
                   {index < 2 ? (

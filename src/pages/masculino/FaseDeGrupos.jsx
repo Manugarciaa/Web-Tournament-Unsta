@@ -43,22 +43,10 @@ const getLogo = (id) => {
 };
 
 const GroupTable = ({ groupName, teams }) => {
-  const sortedTeams = useMemo(() => {
-    return teams.sort((a, b) => {
-      if (b.points !== a.points) {
-        return b.points - a.points;
-      } else if (b.goalDifference !== a.goalDifference) {
-        return b.goalDifference - a.goalDifference;
-      } else {
-        return b.goalsFor - a.goalsFor;
-      }
-    });
-  }, [teams]);
-
   return (
-    <div className="flex flex-col items-center mb-10 sm:mb-16">
+    <div className="flex flex-col items-center mb-10 sm:mb-16 w-full lg:w-1/2">
       <div className="w-full flex justify-center mb-5">
-        <b className="text-white text-4xl sm:text-4xl">{groupName}</b>
+        <b className={`text-white text-4xl sm:text-4xl ${groupName === 'Grupo A' ? 'text-green-600' : groupName === 'Grupo B' ? 'text-red-500' : groupName === 'Grupo C' ? 'text-blue-500' : groupName === 'Grupo D' ? 'text-amber-600' : ''}`}>{groupName}</b>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full">
@@ -77,18 +65,18 @@ const GroupTable = ({ groupName, teams }) => {
             </tr>
           </thead>
           <tbody>
-            {sortedTeams.map((team, index) => (
+            {teams.map((team, index) => (
               <tr className="text-white border-b-2 border-gray-300" style={{ borderBottomColor: 'rgba(255, 255, 255, 0.1)' }} key={index}>
                 <td className="px-2 py-2 sm:px-4 sm:py-4 flex justify-center items-center">
-                  {index < 2 ? (
+                  {index < 1 ? (
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-yellow-700 to-yellow-200 shadow-md">
                       <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
-                  ) : index < 4 ? (
+                  ) : index < 2 ? (
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-400 to-gray-00 shadow-md">
                       <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
-                  ) : index < 6 ? (
+                  ) : index < 3 ? (
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-00 shadow-md">
                       <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
@@ -165,6 +153,8 @@ const FaseDeGrupos = () => {
   const groups = useMemo(() => {
     const grupoA = data.filter(item => item.Grupo === 'Grupo A');
     const grupoB = data.filter(item => item.Grupo === 'Grupo B');
+    const grupoC = data.filter(item => item.Grupo === 'Grupo C');
+    const grupoD = data.filter(item => item.Grupo === 'Grupo D');
 
     return [
       {
@@ -197,6 +187,36 @@ const FaseDeGrupos = () => {
           logo: getLogo(item.ID)
         })),
       },
+      {
+        groupName: 'Grupo C',
+        teams: grupoC.map((item) => ({
+          name: item.Equipo,
+          points: item.Pts,
+          played: item.PJ,
+          won: item.PG,
+          drawn: item.PE,
+          lost: item.PP,
+          goalsFor: item.GF,
+          goalsAgainst: item.GC,
+          goalDifference: item['Dif'],
+          logo: getLogo(item.ID)
+        })),
+      },
+      {
+        groupName: 'Grupo D',
+        teams: grupoD.map((item) => ({
+          name: item.Equipo,
+          points: item.Pts,
+          played: item.PJ,
+          won: item.PG,
+          drawn: item.PE,
+          lost: item.PP,
+          goalsFor: item.GF,
+          goalsAgainst: item.GC,
+          goalDifference: item['Dif'],
+          logo: getLogo(item.ID)
+        })),
+      },
     ];
   }, [data]);
 
@@ -216,9 +236,11 @@ const FaseDeGrupos = () => {
         <span className="text-gradient">Fase de grupos</span>
       </h1>
       {showContent ? (
-        groups.map((group, index) => (
-          <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
-        ))
+        <div className="w-full flex flex-wrap">
+          {groups.map((group, index) => (
+            <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
+          ))}
+        </div>
       ) : (
         <div style={{
           height: '100vh',
