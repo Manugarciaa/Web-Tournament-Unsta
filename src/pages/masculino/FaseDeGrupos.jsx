@@ -46,7 +46,9 @@ const GroupTable = ({ groupName, teams }) => {
   return (
     <div className="flex flex-col items-center mb-10 sm:mb-16 w-full lg:w-1/2">
       <div className="w-full flex justify-center mb-5">
-        <b className={`text-white text-4xl sm:text-4xl ${groupName === 'Grupo A' ? 'text-green-600' : groupName === 'Grupo B' ? 'text-red-500' : groupName === 'Grupo C' ? 'text-blue-500' : groupName === 'Grupo D' ? 'text-amber-600' : ''}`}>{groupName}</b>
+      <b className={`text-4xl sm:text-4xl ${groupName === 'Grupo A' ? 'text-green-600' : groupName === 'Grupo B' ? 'text-red-500' : groupName === 'Grupo C' ? 'text-blue-500' : groupName === 'Grupo D' ? 'text-amber-600' : 'text-white'}`}>
+        {groupName}
+      </b>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full">
