@@ -3,34 +3,34 @@ Partido,Descripcion,Equipo1,Equipo2,Fecha,Hora,Resultado
 2,Fase de grupos - Grupo A,DX1,QUE,Lun. 3/6,10:00,11 : 3
 3,Fase de grupos - Grupo B,SSO,ANT,Lun. 3/6,11:00,6 : 0
 4,Fase de grupos - Grupo B,EXP,TAR,Lun. 3/6,11:00,1 : 5
-6,Fase de grupos - Grupo C,ARQ,HDV,Lun. 3/6,12:00,1 : 2
-5,Fase de grupos - Grupo D,ADO,PMA,Lun. 3/6,12:00,2 : 1
-8,Fase de grupos - Grupo A,SCH,DX1,Lun. 3/6,13:00,4 : 9
-7,Fase de grupos - Grupo D,RAM,EVS,Lun. 3/6,13:00,1 : 7
-10,Fase de grupos - Grupo A,QUE,PAB,Lun. 3/6,14:00,2 : 4
-9,Fase de grupos - Grupo C,GHO,BAS,Lun. 3/6,14:00,0 : 13
+5,Fase de grupos - Grupo C,ARQ,HDV,Lun. 3/6,12:00,1 : 2
+6,Fase de grupos - Grupo D,ADO,PMA,Lun. 3/6,12:00,2 : 1
+7,Fase de grupos - Grupo A,SCH,DX1,Lun. 3/6,13:00,4 : 9
+8,Fase de grupos - Grupo D,RAM,EVS,Lun. 3/6,13:00,1 : 7
+9,Fase de grupos - Grupo A,QUE,PAB,Lun. 3/6,14:00,2 : 4
+10,Fase de grupos - Grupo C,GHO,BAS,Lun. 3/6,14:00,0 : 13
 11,Fase de grupos - Grupo B,SSO,EXP,Lun. 3/6,15:00,5 : 3
 12,Fase de grupos - Grupo B,ANT,TAR,Lun. 3/6,15:00,3 : 2
-19,Fase de grupos - Grupo B,TAR,SSO,Mié. 5/6,10:00,
-13,Fase de grupos - Grupo C,HDV,GHO,Mié. 5/6,10:00,
-15,Fase de grupos - Grupo D,PMA,RAM,Mié. 5/6,11:00,
-16,Fase de grupos - Grupo D,EVS,ADO,Mié. 5/6,11:00,
-18,Fase de grupos - Grupo A,PAB,DX1,Mié. 5/6,12:00,
-17,Fase de grupos - Grupo B,ANT,EXP,Mié. 5/6,12:00,
-14,Fase de grupos - Grupo A,SCH,QUE,Mié. 5/6,13:00,
-20,Fase de grupos - Grupo D,ADO,RAM,Mié. 5/6,13:00,
-21,Fase de grupos - Grupo C,ARQ,GHO,Mié. 5/6,14:00,
-22,Fase de grupos - Grupo C,HDV,BAS,Mié. 5/6,14:00,
-23,Fase de grupos - Grupo C,BAS,ARQ,Mié. 5/6,15:00,
-24,Fase de grupos - Grupo D,EVS,PMA,Mié. 5/6,15:00,
-25,Copa de aluminio - Semifinal,4° A,4° B,Vie. 7/6,10:00,
-26,Copa de aluminio - Semifinal,4° C,4° D,Vie. 7/6,10:00,
-27,Medalla de plata - Semifinal,2° A,2° B,Vie. 7/6,11:00,
-28,Medalla de plata - Semifinal,2° C,2° D,Vie. 7/6,11:00,
-29,Medalla de bronce - Semifinal,3° A,3° B,Vie. 7/6,12:00,
-30,Medalla de bronce - Semifinal,3° C,3° D,Vie. 7/6,12:00,
-31,Copa de oro - Semifinal,1° A,1° B,Vie. 7/6,13:00,
-32,Copa de oro - Semifinal,1° C,1° D,Vie. 7/6,13:00,
+13,Fase de grupos - Grupo B,TAR,SSO,Mié. 5/6,10:00,2 : 2
+14,Fase de grupos - Grupo C,HDV,GHO,Mié. 5/6,10:00,23 : 1
+15,Fase de grupos - Grupo D,PMA,RAM,Mié. 5/6,11:00,1 : 1
+16,Fase de grupos - Grupo D,EVS,ADO,Mié. 5/6,11:00,1 : 4
+17,Fase de grupos - Grupo A,PAB,DX1,Mié. 5/6,12:00,0 : 6
+18,Fase de grupos - Grupo B,ANT,EXP,Mié. 5/6,12:00,3 : 1
+19,Fase de grupos - Grupo A,SCH,QUE,Mié. 5/6,13:00,2 : 1
+20,Fase de grupos - Grupo D,ADO,RAM,Mié. 5/6,13:00,4 : 6
+21,Fase de grupos - Grupo C,ARQ,GHO,Mié. 5/6,14:00,11 : 1
+22,Fase de grupos - Grupo C,HDV,BAS,Mié. 5/6,14:00,2 : 0
+23,Fase de grupos - Grupo C,BAS,ARQ,Mié. 5/6,15:00,5 : 1
+24,Fase de grupos - Grupo D,EVS,PMA,Mié. 5/6,15:00,5 : 1
+25,Copa de aluminio - Semifinal,QUE,EXP,Vie. 7/6,10:00,
+26,Copa de aluminio - Semifinal,GHO,PMA,Vie. 7/6,10:00,
+27,Medalla de plata - Semifinal,SCH,ANT,Vie. 7/6,11:00,
+28,Medalla de plata - Semifinal,BAS,EVS,Vie. 7/6,11:00,
+29,Medalla de bronce - Semifinal,PAB,TAR,Vie. 7/6,12:00,
+30,Medalla de bronce - Semifinal,ARQ,RAM,Vie. 7/6,12:00,
+31,Copa de oro - Semifinal,DX1,SSO,Vie. 7/6,13:00,
+32,Copa de oro - Semifinal,HDV,ADO,Vie. 7/6,13:00,
 33,Copa de aluminio - Final,,,Vie. 7/6,14:00,
 34,Medalla de plata - Final,,,Vie. 7/6,14:00,
 35,Medalla de bronce - Final,,,Vie. 7/6,15:00,

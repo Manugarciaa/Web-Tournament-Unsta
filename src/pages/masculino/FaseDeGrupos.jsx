@@ -42,13 +42,13 @@ const getLogo = (id) => {
   return logos[id] || null;
 };
 
-const GroupTable = ({ groupName, teams }) => {
+const GroupTable = ({ groupName, teams, specialText }) => {
   return (
     <div className="flex flex-col items-center mb-10 sm:mb-16 w-full lg:w-1/2">
       <div className="w-full flex justify-center mb-5">
-      <b className={`text-4xl sm:text-4xl ${groupName === 'Grupo A' ? 'text-green-600' : groupName === 'Grupo B' ? 'text-red-500' : groupName === 'Grupo C' ? 'text-blue-500' : groupName === 'Grupo D' ? 'text-amber-600' : 'text-white'}`}>
-        {groupName}
-      </b>
+        <b className={`text-4xl sm:text-4xl ${groupName === 'Grupo A' ? 'text-green-600' : groupName === 'Grupo B' ? 'text-red-500' : groupName === 'Grupo C' ? 'text-blue-500' : groupName === 'Grupo D' ? 'text-amber-600' : 'text-white'}`}>
+          {groupName}
+        </b>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full">
@@ -111,6 +111,11 @@ const GroupTable = ({ groupName, teams }) => {
           </tbody>
         </table>
       </div>
+      {specialText && (
+        <div className="mt-5 text-center">
+          <p className="text-white text-lg font-semibold" dangerouslySetInnerHTML={{ __html: specialText }} />
+        </div>
+      )}
     </div>
   );
 };
@@ -218,6 +223,7 @@ const FaseDeGrupos = () => {
           goalDifference: item['Dif'],
           logo: getLogo(item.ID)
         })),
+        specialText: 'Adobe F. C. se clasifica a "Copa de oro" por tener ventaja<br />en el duelo directo ante Evolutions F. C. (EVS 1 : 4 ADO)'
       },
     ];
   }, [data]);
@@ -240,7 +246,7 @@ const FaseDeGrupos = () => {
       {showContent ? (
         <div className="w-full flex flex-wrap">
           {groups.map((group, index) => (
-            <GroupTable key={index} groupName={group.groupName} teams={group.teams} />
+            <GroupTable key={index} groupName={group.groupName} teams={group.teams} specialText={group.specialText} />
           ))}
         </div>
       ) : (

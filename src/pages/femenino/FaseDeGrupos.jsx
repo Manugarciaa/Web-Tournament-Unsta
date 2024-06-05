@@ -51,16 +51,12 @@ const GroupTable = ({ groupName, teams }) => {
                       <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
                   ) : index < 4 ? (
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-gray-400 to-gray-00 shadow-md">
-                      <span className="text-white font-bold text-lg">{index + 1}</span>
-                    </div>
-                  ) : index < 6 ? (
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br shadow-md">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-00 shadow-md">
                       <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-white to-gray-400 shadow-md">
-                      <span className="flex items-center justify-center h-full text-black font-bold text-lg">{index + 1}</span>
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br shadow-md">
+                      <span className="text-white font-bold text-lg">{index + 1}</span>
                     </div>
                   )}
                 </td>
