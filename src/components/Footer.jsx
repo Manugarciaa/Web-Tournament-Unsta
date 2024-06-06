@@ -45,8 +45,8 @@ const Footer = () => {
       <ContactInfo>
         <ContactInfoText>Universidad del Norte Santo Tomás de Aquino</ContactInfoText>
         <ContactInfoText>Dirección: Av. Pdte. Perón 2085</ContactInfoText>
-        <ContactInfoText>Teléfono: 0381 410 1198</ContactInfoText>
-        <ContactInfoText>Correo: informes@unsta.edu.ar</ContactInfoText>
+        <ContactInfoText>Teléfono: 0381 410-1198</ContactInfoText>
+        <ContactInfoText>Correo: copaunsta@gmail.com</ContactInfoText>
       </ContactInfo>
       <SocialLinks>
         <SocialLink href="https://www.unsta.edu.ar/ingenieria/" target="_blank" rel="noopener noreferrer">

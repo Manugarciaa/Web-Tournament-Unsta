@@ -485,54 +485,6 @@ const CuadroDeEliminatorias = () => {
                   <Partido>
                     <Etapa>Semifinal</Etapa>
                     <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido27_Equipo1)} alt="Equipo 1" width="50" height="50"/>
-                      <span><strong>{data.Partido27_Equipo1 || '???'}</strong></span>
-                    </div>
-                    <div className="resultado">{displayResultOrDateTime(data.Partido27_Resultado, data.Partido27_Fecha, data.Partido27_Hora)}</div>
-                    <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido27_Equipo2)} alt="Equipo 2" width="50" height="50"/>
-                      <span><strong>{data.Partido27_Equipo2 || '???'}</strong></span>
-                    </div>
-                  </Partido>
-                  <div style={{ borderLeft: '3px solid gray', height: '20px', marginLeft: '50%' }}></div>
-                  <Partido>
-                    <Etapa>Final</Etapa>
-                    <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido34_Equipo1)} alt="Equipo 3" width="50" height="50"/>
-                      <span><strong>{data.Partido34_Equipo1 || '???'}</strong></span>
-                    </div>
-                    <div className="resultado" style={{ fontWeight: 'normal' }}>{displayResultOrDateTime(data.Partido34_Resultado, data.Partido34_Fecha, data.Partido34_Hora)}</div>
-                    <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido34_Equipo2)} alt="Equipo 4" width="50" height="50"/>
-                      <span><strong>{data.Partido34_Equipo2 || '???'}</strong></span>
-                    </div>
-                  </Partido>
-                  <div style={{ borderLeft: '3px solid gray', height: '20px', marginLeft: '50%' }}></div>
-                  <Partido>
-                    <Etapa>Semifinal</Etapa>
-                    <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido28_Equipo1)} alt="Equipo 5" width="50" height="50"/>
-                      <span><strong>{data.Partido28_Equipo1 || '???'}</strong></span>
-                    </div>
-                    <div className="resultado">{displayResultOrDateTime(data.Partido28_Resultado, data.Partido28_Fecha, data.Partido28_Hora)}</div>
-                    <div className="equipo">
-                      <img src={getLogoForTeam(data.Partido28_Equipo2)} alt="Equipo 6" width="50" height="50"/>
-                      <span><strong>{data.Partido28_Equipo2 || '???'}</strong></span>
-                    </div>
-                  </Partido>
-                </Fase>
-              </CopaContainerPLATA>
-            </div>
-            <div className="copa-wrapper">
-              <CopaContainerBRONCE>
-                <Fase>
-                  <div className="header" style={{ textAlign: 'center' }}>
-                  <img src={medalla_bronce} alt="Medalla de bronce" width="50" height="50" style={{ display: 'block', margin: 'auto' }} />
-                    <h2 style={{ fontSize: '20px' }}><strong>MEDALLA DE BRONCE</strong></h2>
-                  </div>
-                  <Partido>
-                    <Etapa>Semifinal</Etapa>
-                    <div className="equipo">
                       <img src={getLogoForTeam(data.Partido29_Equipo1)} alt="Equipo 1" width="50" height="50"/>
                       <span><strong>{data.Partido29_Equipo1 || '???'}</strong></span>
                     </div>
@@ -566,6 +518,54 @@ const CuadroDeEliminatorias = () => {
                     <div className="equipo">
                       <img src={getLogoForTeam(data.Partido30_Equipo2)} alt="Equipo 6" width="50" height="50"/>
                       <span><strong>{data.Partido30_Equipo2 || '???'}</strong></span>
+                    </div>
+                  </Partido>
+                </Fase>
+              </CopaContainerPLATA>
+            </div>
+            <div className="copa-wrapper">
+              <CopaContainerBRONCE>
+                <Fase>
+                  <div className="header" style={{ textAlign: 'center' }}>
+                  <img src={medalla_bronce} alt="Medalla de bronce" width="50" height="50" style={{ display: 'block', margin: 'auto' }} />
+                    <h2 style={{ fontSize: '20px' }}><strong>MEDALLA DE BRONCE</strong></h2>
+                  </div>
+                  <Partido>
+                    <Etapa>Semifinal</Etapa>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido27_Equipo1)} alt="Equipo 1" width="50" height="50"/>
+                      <span><strong>{data.Partido27_Equipo1 || '???'}</strong></span>
+                    </div>
+                    <div className="resultado">{displayResultOrDateTime(data.Partido27_Resultado, data.Partido27_Fecha, data.Partido27_Hora)}</div>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido27_Equipo2)} alt="Equipo 2" width="50" height="50"/>
+                      <span><strong>{data.Partido27_Equipo2 || '???'}</strong></span>
+                    </div>
+                  </Partido>
+                  <div style={{ borderLeft: '3px solid gray', height: '20px', marginLeft: '50%' }}></div>
+                  <Partido>
+                    <Etapa>Final</Etapa>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido34_Equipo1)} alt="Equipo 3" width="50" height="50"/>
+                      <span><strong>{data.Partido34_Equipo1 || '???'}</strong></span>
+                    </div>
+                    <div className="resultado" style={{ fontWeight: 'normal' }}>{displayResultOrDateTime(data.Partido34_Resultado, data.Partido34_Fecha, data.Partido34_Hora)}</div>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido34_Equipo2)} alt="Equipo 4" width="50" height="50"/>
+                      <span><strong>{data.Partido34_Equipo2 || '???'}</strong></span>
+                    </div>
+                  </Partido>
+                  <div style={{ borderLeft: '3px solid gray', height: '20px', marginLeft: '50%' }}></div>
+                  <Partido>
+                    <Etapa>Semifinal</Etapa>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido28_Equipo1)} alt="Equipo 5" width="50" height="50"/>
+                      <span><strong>{data.Partido28_Equipo1 || '???'}</strong></span>
+                    </div>
+                    <div className="resultado">{displayResultOrDateTime(data.Partido28_Resultado, data.Partido28_Fecha, data.Partido28_Hora)}</div>
+                    <div className="equipo">
+                      <img src={getLogoForTeam(data.Partido28_Equipo2)} alt="Equipo 6" width="50" height="50"/>
+                      <span><strong>{data.Partido28_Equipo2 || '???'}</strong></span>
                     </div>
                   </Partido>
                 </Fase>
