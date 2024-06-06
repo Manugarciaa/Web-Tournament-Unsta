@@ -37,11 +37,10 @@ const equipos = [
   { id: 9, nombre: 'Ghostbusters', logo: GHO_logo, abreviatura: 'GHO' },
   { id: 10, nombre: 'Bastardos de Richard', logo: BAS_logo, abreviatura: 'BAS' },
   { id: 11, nombre: 'Arquero Fantasma', logo: ARQ_logo, abreviatura: 'ARQ' },
-  { id: 12, nombre: 'Herederos de Vega', logo: HDV_logo, abreviatura: 'HDV' },
-  { id: 13, nombre: 'Rama y sus Ramitas', logo: RAM_logo, abreviatura: 'RAM' },
-  { id: 14, nombre: 'Evolutions F. C.', logo: EVS_logo, abreviatura: 'EVS' },
-  { id: 15, nombre: 'Adobe F. C.', logo: ADO_logo, abreviatura: 'ADO' },
-  { id: 16, nombre: 'Poca Magia F. C.', logo: PMA_logo, abreviatura: 'PMA' },
+  { id: 12, nombre: 'Rama y sus Ramitas', logo: RAM_logo, abreviatura: 'RAM' },
+  { id: 13, nombre: 'Evolutions F. C.', logo: EVS_logo, abreviatura: 'EVS' },
+  { id: 14, nombre: 'Adobe F. C.', logo: ADO_logo, abreviatura: 'ADO' },
+  { id: 15, nombre: 'Poca Magia F. C.', logo: PMA_logo, abreviatura: 'PMA' },
 ];
 
 function Equipos() {

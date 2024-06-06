@@ -217,9 +217,9 @@ const Partidos = () => {
           skipEmptyLines: true,
           complete: (results) => {
             const parsedData = results.data;
-            const jornada1 = parsedData.slice(0, 12);
-            const jornada2 = parsedData.slice(12, 24);
-            const eliminatorias = parsedData.slice(24);
+            const jornada1 = parsedData.slice(0, 11);
+            const jornada2 = parsedData.slice(11, 21);
+            const eliminatorias = parsedData.slice(21);
 
             setData([...jornada1, ...jornada2, ...eliminatorias]);
             setIsLoading(false);
@@ -244,15 +244,15 @@ const Partidos = () => {
   const groupedMatches = useMemo(() => [
     {
       title: "Jornada 1 - Fase de grupos",
-      matches: data.slice(0, 12)
+      matches: data.slice(0, 11)
     },
     {
       title: "Jornada 2 - Fase de grupos",
-      matches: data.slice(12, 24)
+      matches: data.slice(11, 21)
     },
     {
       title: "Jornada 3 - Eliminatorias",
-      matches: data.slice(24)
+      matches: data.slice(21)
     }
   ], [data]);
 
